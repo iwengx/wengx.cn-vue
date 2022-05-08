@@ -1,0 +1,24 @@
+@media screen and (max-width: 900px) {
+   .wengx-main {
+      article {
+         grid-template-columns: 1fr !important;
+         grid-template-rows: 1fr minmax(100px, 0.5fr);
+      }
+
+      .main-player-box {
+         display: none;
+      }
+   }
+}
+
+@media screen and (max-width: 576px) {
+   html {
+      font-size: 14px;
+   }
+
+   .wengx-main {
+      article {
+         padding: 5px 20px !important;
+      }
+   }
+}
