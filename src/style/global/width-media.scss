@@ -3,6 +3,7 @@
       article {
          grid-template-columns: 1fr !important;
          grid-template-rows: 1fr minmax(100px, 0.5fr);
+         align-items: center;
       }
 
       .main-player-box {
