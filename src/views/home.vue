@@ -1,6 +1,7 @@
 <template>
    <main class="wengx-main">
       <div class="header-img">
+         <img class="wengxcn-img" src="../assets/wengxcn.png" alt="" />
          <div class="bg-wool-dark"></div>
          <div class="trans-top-darkwool"></div>
       </div>
@@ -49,6 +50,24 @@
                   <p>- 欢迎加企鹅群(955907864)一起讨论、合作.</p>
                   <br />
                   <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=Yb0G9swZ">一键加群</a>
+                  <div class="version-box">
+                     <b class="nes-badge" style="margin-bottom: 20px">
+                        <span class="is-warning">最新版本：v2.4</span>
+                     </b>
+                     <p>
+                        - <span class="nes-text is-success">添加</span> 启动时自动搜索 javaw 进程.
+                     </p>
+                     <p>- <span class="nes-text is-error">修复</span> 迁移服务器，减少作者支出.</p>
+                  </div>
+                  <div class="statement-box">
+                     <b class="nes-badge" style="margin-bottom: 20px">
+                        <span class="is-warning">小肝声明</span>
+                     </b>
+                     <p>- 本程序只是模拟键盘输入，帮你操作按键，并没有对游戏数据做任何的修改！</p>
+                     <p>
+                        - 软件不存在任何恶意病毒、木马，由于是C#语言编写，自创软件导致被杀软误报。
+                     </p>
+                  </div>
                </div>
                <div class="card-footer">
                   <div @click="toGitHub">
@@ -103,6 +122,13 @@ const toGitHub = () => {
          background-image: url('../assets/trans-top-darkwool.png');
          background-position-x: 100%;
       }
+
+      .wengxcn-img {
+         width: 100px;
+         position: absolute;
+         top: 20px;
+         left: 20px;
+      }
    }
 
    .footer-img {
@@ -129,6 +155,9 @@ const toGitHub = () => {
       gap: 50px;
       grid-template-columns: 1fr 1fr;
       align-content: center;
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
 
       .left-content {
          table {
@@ -182,6 +211,11 @@ const toGitHub = () => {
       .right-content {
          height: 100%;
          overflow: hidden;
+
+         .statement-box,
+         .version-box {
+            margin-top: 35px;
+         }
       }
    }
 
