@@ -18,6 +18,11 @@ p {
    margin-bottom: 0;
 }
 
+ul,
+li {
+   list-style: none;
+}
+
 .nes-balloon {
    border-image-repeat: stretch !important;
 }

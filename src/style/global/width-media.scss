@@ -1,8 +1,25 @@
 @media screen and (max-width: 900px) {
    .wengx-main {
-      article {
+      .main-body {
+         height: auto !important;
+         margin: 0 !important;
+         border-radius: 0 !important;
+      }
+
+      .body-header .coolie-fear-img {
+         width: 50px !important;
+         bottom: 0 !important;
+         top: 15px;
+      }
+
+      .body-content {
          grid-template-columns: 1fr !important;
          align-items: center;
+      }
+
+      .left-content,
+      .right-content {
+         height: auto !important;
       }
 
       .main-player-box {
@@ -17,8 +34,8 @@
    }
 
    .wengx-main {
-      article {
-         padding: 5px 20px !important;
+      .body-header {
+         flex-direction: column;
       }
    }
 }
