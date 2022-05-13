@@ -4,7 +4,7 @@ import { getCookie } from '../utils/cookie/index';
 //1. 创建新的axios实例，
 const service = axios.create({
    // 接口地址
-   baseURL: 'http://www.worldintek.com:8201',
+   baseURL: 'http://ovohi.com',
    // 超时时间 单位是ms，这里设置了60s的超时时间
    timeout: 60 * 1000,
 });
@@ -30,11 +30,9 @@ service.interceptors.request.use(
 // 3.响应拦截器
 service.interceptors.response.use(
    (response) => {
-      const validCode: number[] = [200, 502];
-      if (validCode.includes(response.data.code)) {
+      const validCode: number[] = [200];
+      if (validCode.includes(response.data.status)) {
          return response.data;
-      } else if (response.data.code == 401) {
-         window.location.href = '/login';
       } else {
          return Promise.reject(response.data);
       }
