@@ -1,9 +1,9 @@
 @media screen and (max-width: 900px) {
    .wengx-main {
+      padding: 25px !important;
+
       .main-body {
          height: auto !important;
-         margin: 0 !important;
-         border-radius: 0 !important;
       }
 
       .body-header .coolie-fear-img {
@@ -34,8 +34,14 @@
    }
 
    .wengx-main {
-      .body-header {
-         flex-direction: column;
+      padding: 0 !important;
+
+      .main-body {
+         border-radius: 0 !important;
+
+         .body-header {
+            flex-direction: column;
+         }
       }
    }
 }

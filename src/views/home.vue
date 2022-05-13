@@ -40,11 +40,11 @@
                      </div>
                   </div>
                   <div class="online-data">
-                     <div class="data-item" style="background-image: url('/src/assets/data-1.jpg')">
+                     <div class="data-item">
                         <p>今日网站访问量</p>
                         <h2>124</h2>
                      </div>
-                     <div class="data-item" style="background-image: url('/src/assets/data-2.jpg')">
+                     <div class="data-item">
                         <p>今日小肝访问量</p>
                         <h2>89</h2>
                      </div>
@@ -95,17 +95,20 @@ const toGitHub = () => {
    background-image: url('../assets/wallhaven-z8vk1w.png');
    background-size: cover;
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding: 40px;
 }
 
 .wengx-main .main-body {
    position: relative;
    width: 100%;
    max-width: 1680px;
-   height: 1000px;
-   margin: 40px;
+   height: 100%;
+   max-height: 1000px;
 
+   flex: 1;
    display: flex;
    flex-direction: column;
 
@@ -153,14 +156,12 @@ const toGitHub = () => {
       grid-template-columns: 1fr 1fr;
       gap: 50px;
       align-items: center;
-      margin: 20px 0;
       padding: 0 30px;
       flex: 1;
    }
 
    .body-footer {
       height: 150px;
-      padding: 20px 35px;
 
       background-image: url('../assets/trans-bottom-darkwool.png');
       background-repeat: repeat-x;
@@ -220,7 +221,6 @@ const toGitHub = () => {
 
       .data-item {
          width: 150px;
-         background: rgba(139, 195, 74, 0.3803921569);
          padding: 10px 10px 1px;
          border-radius: 10px;
          transition: filter 0.1s;
@@ -231,6 +231,14 @@ const toGitHub = () => {
 
          p {
             font-size: 1rem;
+         }
+
+         &:first-child {
+            background-image: url('../assets/data-1.jpg');
+         }
+
+         &:nth-child(2) {
+            background-image: url('../assets/data-2.jpg');
          }
 
          &:hover {
