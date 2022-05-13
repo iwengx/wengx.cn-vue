@@ -42,11 +42,11 @@
                   <div class="online-data">
                      <div class="data-item">
                         <p>今日网站访问量</p>
-                        <h2>124</h2>
+                        <h2>{{ webVisitorsCount }}</h2>
                      </div>
                      <div class="data-item">
                         <p>今日小肝访问量</p>
-                        <h2>89</h2>
+                        <h2>{{ lilLiverHelperVisitorsCount }}</h2>
                      </div>
                   </div>
                </div>
@@ -84,9 +84,30 @@
 </template>
 
 <script setup lang="ts">
+import { getToDayWebVisitorsCount, getToDayLilLiverHelperVisitorsCount } from '../api/interface';
+
+let webVisitorsCount = ref(0);
+let lilLiverHelperVisitorsCount = ref(0);
+
 const toGitHub = () => {
    window.open('https://github.com/wengx-unx');
 };
+
+getToDayWebVisitorsCount()
+   .then((res: any) => {
+      webVisitorsCount.value = res.data;
+   })
+   .catch((err) => {
+      console.log(err);
+   });
+
+getToDayLilLiverHelperVisitorsCount()
+   .then((res: any) => {
+      lilLiverHelperVisitorsCount.value = res.data;
+   })
+   .catch((err) => {
+      console.log(err);
+   });
 </script>
 
 <style lang="scss">
