@@ -2,7 +2,13 @@
    <main class="wengx-main">
       <article class="main-body">
          <div class="body-header">
-            <img class="wengxcn-img" src="../assets/wengxcn.png" alt="" />
+            <a
+               ><img
+                  @click="router.push('/')"
+                  class="wengxcn-img"
+                  src="../assets/wengxcn.png"
+                  alt=""
+            /></a>
             <img class="coolie-fear-img" src="../assets/coolie-fear.png" alt="" />
             <ul class="link-box">
                <li>
@@ -12,7 +18,7 @@
                   </a>
                </li>
                <li>
-                  <a>关于我们</a>
+                  <a @click="router.push('about')">关于我</a>
                </li>
             </ul>
          </div>
@@ -35,6 +41,8 @@
 
 <script setup lang="ts">
 import { getToDayWebVisitorsCount, getToDayLilLiverHelperVisitorsCount } from '../api/interface';
+
+const router = useRouter();
 
 let webVisitorsCount = ref(0);
 let lilLiverHelperVisitorsCount = ref(0);
