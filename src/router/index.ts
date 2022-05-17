@@ -15,6 +15,11 @@ const routes = [
             name: 'about',
             component: () => import('../views/about.vue'),
          },
+         {
+            path: 'lil-liver-helper',
+            name: 'lil-liver-helper',
+            component: () => import('../views/lil-liver-helper.vue'),
+         },
       ],
    },
    {
