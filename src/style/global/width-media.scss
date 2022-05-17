@@ -12,11 +12,6 @@
          top: 15px;
       }
 
-      .body-content {
-         grid-template-columns: 1fr !important;
-         align-items: center;
-      }
-
       .left-content,
       .right-content {
          height: auto !important;
@@ -25,6 +20,11 @@
       .main-player-box {
          display: none;
       }
+   }
+
+   .home-views {
+      grid-template-columns: 1fr !important;
+      align-items: center;
    }
 }
 
