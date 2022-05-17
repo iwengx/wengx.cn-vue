@@ -23,7 +23,7 @@
 .about-views {
    width: 100%;
    height: 100%;
-   padding: 30px;
+   padding: 120px 30px;
    text-align: center;
 
    h1 {

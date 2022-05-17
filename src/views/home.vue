@@ -18,7 +18,9 @@
                   <h2>我的世界小肝助手</h2>
                </div>
                <div>
-                  <button class="nes-btn is-success">前往下载</button>
+                  <button class="nes-btn is-success" @click="router.push('lil-liver-helper')">
+                     前往下载
+                  </button>
                </div>
             </div>
             <div class="online-data">
@@ -55,6 +57,8 @@
 <script setup lang="ts">
 import { getToDayWebVisitorsCount, getToDayLilLiverHelperVisitorsCount } from '../api/interface';
 
+const router = useRouter();
+
 let webVisitorsCount = ref(0);
 let lilLiverHelperVisitorsCount = ref(0);
 
@@ -81,7 +85,7 @@ getToDayLilLiverHelperVisitorsCount()
    grid-template-columns: 1fr 1fr;
    gap: 50px;
    align-items: center;
-   padding: 0 30px;
+   padding: 120px 30px 150px;
    flex: 1;
 
    .left-content {

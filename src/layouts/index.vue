@@ -98,7 +98,9 @@ getToDayLilLiverHelperVisitorsCount()
    background-size: cover;
 
    .body-header {
-      position: relative;
+      position: absolute;
+      z-index: 2;
+      width: 100%;
       height: 120px;
       padding: 20px;
       display: flex;
@@ -133,9 +135,34 @@ getToDayLilLiverHelperVisitorsCount()
    .body-content {
       flex: 1;
       display: flex;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+         width: 8px;
+         background: white;
+      }
+      &::-webkit-scrollbar-corner, /* 滚动条角落 */
+         &::-webkit-scrollbar-thumb,
+         &::-webkit-scrollbar-track {
+         border-radius: 4px;
+      }
+      &::-webkit-scrollbar-corner,
+      &::-webkit-scrollbar-track {
+         /* 滚动条轨道 */
+         background-color: rgba(180, 160, 120, 0.1);
+         box-shadow: inset 0 0 1px rgba(180, 160, 120, 0.5);
+      }
+      &::-webkit-scrollbar-thumb {
+         /* 滚动条手柄 */
+         background-color: #4e4e4e;
+      }
    }
 
    .body-footer {
+      position: absolute;
+      bottom: 0;
+
+      width: 100%;
       height: 150px;
 
       background-image: url('../assets/trans-bottom-darkwool.png');
