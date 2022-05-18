@@ -1,22 +1,16 @@
 <template>
-   <div class="wengx-carousel" style="">
+   <div class="wengx-carousel">
       <div class="left">
          <a @click="leftClickEvent" class="btn">{{ '<' }}</a>
       </div>
-      <div class="content">
-         <table class="nes-table is-bordered is-centered track">
-            <tbody>
-               <tr>
-                  <td :style="`transform: translate(${translateX}px, 0);`">
-                     <img src="../assets/lil-liver-helper/home.jpg" />
-                     <img src="../assets/lil-liver-helper/2.jpg" />
-                     <img src="../assets/lil-liver-helper/3.jpg" />
-                     <img src="../assets/lil-liver-helper/4.jpg" />
-                     <img src="../assets/lil-liver-helper/5.jpg" />
-                  </td>
-               </tr>
-            </tbody>
-         </table>
+      <div class="carousel-content nes-table is-bordered" ref="tableMain">
+         <div class="content-body">
+            <img
+               v-for="(img, index) in images"
+               :src="getImageUrl(img)"
+               :class="page === index ? 'active-img' : 'none-img'"
+            />
+         </div>
       </div>
       <div class="right">
          <a @click="rightClickEvent" class="btn">{{ '>' }}</a>
@@ -25,21 +19,27 @@
 </template>
 
 <script setup lang="ts">
-let translateX = ref(0);
+function getImageUrl(name: string) {
+   return new URL(`../assets/lil-liver-helper/${name}.jpg`, import.meta.url).href;
+}
+
+const images: string[] = ['home', '2', '3', '4', '5'];
+
+let page = ref(0);
 
 const leftClickEvent = () => {
-   if (translateX.value !== 0) translateX.value = translateX.value + 650;
+   if (page.value > 0) page.value--;
 };
 
 const rightClickEvent = () => {
-   if (translateX.value !== -650 * 4) translateX.value = translateX.value - 650;
+   if (page.value < 4) page.value++;
 };
 </script>
 
 <style lang="scss" scoped>
 .wengx-carousel {
+   padding: 0 20px;
    width: 100%;
-   height: 406px;
    position: relative;
 
    .left {
@@ -50,31 +50,27 @@ const rightClickEvent = () => {
       transform: translate(0, -50%);
    }
 
-   .content {
-      width: 658px;
+   .carousel-content {
+      max-width: 658px;
       overflow: hidden;
       margin: 0 auto;
+      background-color: transparent;
 
-      .track {
-         width: 650px;
-      }
-
-      table {
-         background-color: transparent;
-      }
-
-      td {
+      .content-body {
          padding: 0;
          display: flex;
          transition: transform 0.5s;
 
          img {
-            margin-right: 10px;
+            border-radius: 3px;
          }
-      }
 
-      .img-none {
-         display: none;
+         .none-img {
+            display: none;
+         }
+
+         .active-img {
+         }
       }
    }
 
