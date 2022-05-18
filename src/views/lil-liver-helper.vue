@@ -37,28 +37,21 @@
       <div class="using-box">
          <h1>使用教程（必看）</h1>
          <div class="btn-group">
-            <a
+            <span
                v-for="(btn, index) in btnList"
                @click="setActiveBtn(index)"
-               :class="active === index ? 'active' : ''"
-               href="#"
+               :class="'base-btn ' + (active === index ? 'active' : '')"
             >
                {{ btn }}
-            </a>
+            </span>
          </div>
-         <table class="nes-table is-bordered is-centered">
-            <tbody>
-               <tr>
-                  <td>
-                     <video
-                        controls
-                        :src="getVideoUrl(videoList[active])"
-                        style="width: 100%; border-radius: 5px"
-                     ></video>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
+         <div class="nes-table is-bordered is-centered" style="padding: 5px 5px 0 5px">
+            <video
+               controls
+               :src="getVideoUrl(videoList[active])"
+               style="width: 100%; border-radius: 5px"
+            ></video>
+         </div>
       </div>
       <div class="problem-box">
          <h1>&#128204; 常见问题</h1>
@@ -187,9 +180,11 @@ const download = () => {
    .btn-group {
       margin: 20px 0 30px;
 
-      a {
+      span {
+         display: inline-block;
          margin-right: 20px;
          transition: color 0.2s, font-weight 0.2s;
+         color: #795548;
       }
 
       .active {
