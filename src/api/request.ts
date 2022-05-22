@@ -4,7 +4,7 @@ import { getCookie } from '../utils/cookie/index';
 //1. 创建新的axios实例，
 const service = axios.create({
    // 接口地址
-   baseURL: 'http://ovohi.com',
+   baseURL: 'http://wengx.cn',
    // 超时时间 单位是ms，这里设置了60s的超时时间
    timeout: 60 * 1000,
 });
