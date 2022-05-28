@@ -24,14 +24,18 @@
                </div>
             </div>
             <div class="online-data">
-               <div class="data-item">
-                  <p>今日网站访问量</p>
-                  <h2>{{ webVisitorsCount }}</h2>
-               </div>
-               <div class="data-item">
-                  <p>今日小肝访问量</p>
-                  <h2>{{ lilLiverHelperVisitorsCount }}</h2>
-               </div>
+               <router-link to="/visits-web">
+                  <div class="data-item data-back-1">
+                     <p>今日网站访问量</p>
+                     <h2>{{ webVisitorsCount }}</h2>
+                  </div>
+               </router-link>
+               <router-link to="/visits-llh">
+                  <div class="data-item data-back-2">
+                     <p>今日小肝访问量</p>
+                     <h2>{{ lilLiverHelperVisitorsCount }}</h2>
+                  </div>
+               </router-link>
             </div>
          </div>
       </div>
@@ -116,6 +120,10 @@ getToDayLilLiverHelperVisitorsCount()
       .online-data {
          margin-top: 25px;
          display: flex;
+
+         a {
+            text-decoration: none;
+         }
       }
 
       .data-item {
@@ -132,17 +140,17 @@ getToDayLilLiverHelperVisitorsCount()
             font-size: 1rem;
          }
 
-         &:first-child {
-            background-image: url('../assets/data-1.jpg');
-         }
-
-         &:nth-child(2) {
-            background-image: url('../assets/data-2.jpg');
-         }
-
          &:hover {
             filter: drop-shadow(2px 4px 6px black);
          }
+      }
+
+      .data-back-1 {
+         background-image: url('../assets/data-1.jpg');
+      }
+
+      .data-back-2 {
+         background-image: url('../assets/data-2.jpg');
       }
    }
 

@@ -20,6 +20,16 @@ const routes = [
             name: 'lil-liver-helper',
             component: () => import('../views/lil-liver-helper.vue'),
          },
+         {
+            path: 'visits-llh',
+            name: 'visits-lil-liver-helper',
+            component: () => import('../views/visits/lil-liver-helper.vue'),
+         },
+         {
+            path: 'visits-web',
+            name: 'visits-web',
+            component: () => import('../views/visits/web.vue'),
+         },
       ],
    },
    {
