@@ -3,7 +3,7 @@
       <p class="title">&#10024; 官网访问量可视化曲线图</p>
       <p class="explanation">说明: 每位玩家当日打开就算一次，多次打开也只算一次。</p>
 
-      <div class="echarts-main" id="main"></div>
+      <div class="echarts-main" id="main" v-if="isMainChartInit"></div>
    </div>
 </template>
 
@@ -12,6 +12,8 @@ import { getTenDaysWebEChartsData } from '../../api/interface';
 import * as echarts from 'echarts';
 
 type EChartsOption = echarts.EChartsOption;
+
+let isMainChartInit = ref(true);
 
 onMounted(() => {
    let chartDom = document.getElementById('main')!;
@@ -55,6 +57,10 @@ onMounted(() => {
    window.onresize = function () {
       myChart.resize();
    };
+
+   onBeforeUnmount(() => {
+      isMainChartInit.value = false;
+   });
 });
 </script>
 
