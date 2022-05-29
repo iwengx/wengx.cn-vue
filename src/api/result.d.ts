@@ -1,4 +1,4 @@
-export interface EChartsLLHProps {
+export interface TenDaysVisitsProps {
    seriesData: number[];
    xAxisData: string[];
 }
