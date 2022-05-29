@@ -44,7 +44,6 @@ onMounted(() => {
       .then((res) => {
          (option.xAxis as any).data = res.data.xAxisData;
          (option.series as any)[0].data = res.data.seriesData;
-         console.log(option);
       })
       .catch((err) => {
          console.log(err.message);
