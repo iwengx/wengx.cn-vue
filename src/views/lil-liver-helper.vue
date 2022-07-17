@@ -75,6 +75,8 @@
 </template>
 
 <script setup lang="ts">
+import Carousel from '../components/carousel.vue';
+
 interface QA {
    createTime: string;
    questions: string;
