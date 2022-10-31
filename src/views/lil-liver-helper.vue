@@ -3,7 +3,7 @@
       <Carousel></Carousel>
       <div class="download-box">
          <div>
-            <p><b>我的世界 小肝助手 v2.4</b></p>
+            <p><b>我的世界 小肝助手 v2.4.1</b></p>
             <p>使用 C# .Net Framework 4.0 开发.</p>
          </div>
          <div>
@@ -11,8 +11,8 @@
                class="nes-btn is-success"
                style="color: white"
                target="_blank"
-               href="../program/小肝助手v2.4.rar"
-               >下载 v2.4
+               href="../program/小肝助手v2.4.1.rar"
+               >下载 v2.4.1
             </a>
          </div>
       </div>
@@ -68,13 +68,14 @@
                style="max-width: 500px"
             />
             <p>&#128102; : {{ item.answers }}</p>
-            <a v-if="item.link" target="_blank" href="item.link">下载地址传送门</a>
+            <a v-if="item.link" target="_blank" :href="item.link">下载地址传送门</a>
          </div>
       </div>
    </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import Carousel from '../components/carousel.vue';
 
 interface QA {
@@ -123,10 +124,6 @@ const questionsAndAnswersList: QA[] = [
       link: 'https://www.microsoft.com/de-de/download/details.aspx?id=17718',
    },
 ];
-
-const download = () => {
-   window.open('');
-};
 </script>
 
 <style lang="scss">

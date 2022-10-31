@@ -8,6 +8,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref, onBeforeUnmount } from 'vue';
 import { getTenDaysLilLiverHelperEChartsData } from '../../api/interface';
 import * as echarts from 'echarts';
 

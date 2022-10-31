@@ -19,6 +19,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
 function getImageUrl(name: string) {
    return new URL(`../assets/lil-liver-helper/${name}.jpg`, import.meta.url).href;
 }
