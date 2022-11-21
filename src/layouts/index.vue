@@ -9,16 +9,20 @@
                   src="../assets/wengxcn.png"
                   alt=""
             /></a>
-            <img class="coolie-fear-img" src="../assets/coolie-fear.png" alt="" />
+            <img
+               class="coolie-fear-img"
+               src="../assets/coolie-fear.png"
+               alt=""
+            />
             <ul class="link-box">
                <li>
                   <a @click="toGitHub">
-                     <i class="nes-icon github is-small" style="vertical-align: middle"></i>
+                     <i
+                        class="nes-icon github is-small"
+                        style="vertical-align: middle"
+                     ></i>
                      <span> WengX-unx</span>
                   </a>
-               </li>
-               <li>
-                  <a @click="router.push('about')">关于我</a>
                </li>
             </ul>
          </div>
@@ -30,7 +34,9 @@
          <div class="body-footer">
             <div class="main-player-box">
                <div class="slideLeft">
-                  <p class="nes-balloon from-right">hello，你好啊！欢迎来到我的网站~</p>
+                  <p class="nes-balloon from-right">
+                     hello，你好啊！欢迎来到我的网站~
+                  </p>
                   <img src="../assets/minecraft-player-1.png" alt="史蒂夫" />
                </div>
             </div>
@@ -42,7 +48,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { getToDayWebVisitorsCount, getToDayLilLiverHelperVisitorsCount } from '../api/interface';
+import {
+   getToDayWebVisitorsCount,
+   getToDayLilLiverHelperVisitorsCount,
+} from '../api/interface';
 
 const router = useRouter();
 
