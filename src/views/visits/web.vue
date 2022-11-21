@@ -1,13 +1,16 @@
 <template>
    <div class="visits-web-page">
       <p class="title">&#10024; 官网访问量可视化曲线图</p>
-      <p class="explanation">说明: 每位玩家当日打开就算一次，多次打开也只算一次。</p>
+      <p class="explanation">
+         说明: 每位玩家当日打开就算一次，多次打开也只算一次。
+      </p>
 
       <div class="echarts-main" id="main" v-if="isMainChartInit"></div>
    </div>
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { getTenDaysWebEChartsData } from '../../api/interface';
 import * as echarts from 'echarts';
 
