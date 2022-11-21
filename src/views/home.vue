@@ -18,7 +18,10 @@
                   <h2>我的世界小肝助手</h2>
                </div>
                <div>
-                  <button class="nes-btn is-success" @click="router.push('lil-liver-helper')">
+                  <button
+                     class="nes-btn is-success"
+                     @click="router.push('lil-liver-helper')"
+                  >
                      前往下载
                   </button>
                </div>
@@ -50,7 +53,15 @@
                   <p>- 分享给你身边的朋友一起使用，是对我最大的支持和鼓励！</p>
                   <p>- 欢迎加企鹅群(955907864)一起讨论、合作.</p>
                   <br />
-                  <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=Yb0G9swZ">一键加群</a>
+                  <div class="space">
+                     <a
+                        target="_blank"
+                        href="https://jq.qq.com/?_wv=1027&k=Yb0G9swZ"
+                     >
+                        一键加群
+                     </a>
+                     <a href="#/lil-liver-helper"> 视频教程 </a>
+                  </div>
                </div>
             </div>
          </div>
@@ -61,7 +72,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { getToDayWebVisitorsCount, getToDayLilLiverHelperVisitorsCount } from '../api/interface';
+import {
+   getToDayWebVisitorsCount,
+   getToDayLilLiverHelperVisitorsCount,
+} from '../api/interface';
 
 const router = useRouter();
 
@@ -163,6 +177,11 @@ getToDayLilLiverHelperVisitorsCount()
       .statement-box,
       .version-box {
          margin-top: 35px;
+      }
+
+      .space {
+         display: flex;
+         gap: 20px;
       }
    }
 }
