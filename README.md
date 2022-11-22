@@ -12,5 +12,5 @@
 </p>
 
 <p align="center">
-    :book: 官网源码仓库
+    :book: 官网源码仓库（不包含后端 Node.js）
 </p>
