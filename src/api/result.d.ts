@@ -1,19 +1,18 @@
+interface Result<T> {
+   data: T;
+   status: number;
+}
+
 /**
  * 接口的返回值类型
  */
 declare namespace Visits {
-   interface ResToDay {
-      data: number;
-      status: number;
-   }
+   type ResToDay = Result<number>;
 
-   interface ResSetToDay {
-      data: string;
-      status: number;
-   }
+   type ResSetToDay = Result<string>;
 
-   interface ResTenDays {
+   type ResTenDays = Result<{
       seriesData: number[];
       xAxisData: string[];
-   }
+   }>;
 }
