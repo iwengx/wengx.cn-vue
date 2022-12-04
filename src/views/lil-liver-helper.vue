@@ -3,16 +3,17 @@
       <Carousel></Carousel>
       <div class="download-box">
          <div>
-            <p><b>我的世界 小肝助手 v2.4.1</b></p>
-            <p>使用 C# .Net Framework 4.0 开发.</p>
+            <p><b>我的世界 小肝助手 v2.5.2</b></p>
+            <p>更新日期：2022-12-04</p>
+            <p>使用 C# .Net Framework 4.5.2 开发.</p>
          </div>
          <div>
             <a
                class="nes-btn is-success"
                style="color: white"
                target="_blank"
-               href="../program/小肝助手v2.4.1.rar"
-               >下载 v2.4.1
+               href="../program/minecraft-lil-liver-helper-v2.5.2.exe"
+               >立刻下载
             </a>
          </div>
       </div>
@@ -38,17 +39,17 @@
          <h1>使用教程（必看）</h1>
          <div class="btn-group">
             <span
-               v-for="(btn, index) in btnList"
+               v-for="(btn, index) in videoList"
                @click="setActiveBtn(index)"
                :class="'base-btn ' + (active === index ? 'active' : '')"
             >
-               {{ btn }}
+               {{ btn.title }}
             </span>
          </div>
          <div class="nes-table is-bordered is-centered" style="padding: 5px 5px 0 5px">
             <video
                controls
-               :src="getVideoUrl(videoList[active])"
+               :src="videoList[active].url"
                style="width: 100%; border-radius: 5px"
             ></video>
          </div>
@@ -78,31 +79,49 @@
 import { ref } from 'vue';
 import Carousel from '../components/carousel.vue';
 
-interface QA {
-   createTime: string;
-   questions: string;
-   answers: string;
-   imgSrc?: string;
-   link?: string;
-}
+// function getVideoUrl(name: string) {
+//    return new URL(`../assets/video/${name}.mp4`, import.meta.url).href;
+// }
 
-function getVideoUrl(name: string) {
-   return new URL(`../assets/video/${name}.mp4`, import.meta.url).href;
-}
-
-function getQuestionsImgUrl(name: string) {
+// * 动态设置问答环节的图片URL
+const getQuestionsImgUrl = (name: string) => {
    return new URL(`../assets/questions-img/${name}.png`, import.meta.url).href;
-}
+};
 
-let active = ref(0);
-const videoList: string[] = ['钓鱼机', '钓鱼脚本', '鼠标脚本', '隐藏到后台', '自动发消息脚本'];
-const btnList: string[] = videoList;
+// * 当前点击的是哪个视频标题
+const active = ref(0);
 
+// * 视频列表
+const videoList: VideoListType = [
+   {
+      title: '钓鱼机',
+      url: 'https://wave.video/embed/638c476f929ed54796d7e1d3/638c476f929ed54796d7e1d1.mp4',
+   },
+   {
+      title: '钓鱼脚本',
+      url: 'https://wave.video/embed/638c48fe9921fd5ef0b1590a/638c48fe9921fd5ef0b15908.mp4',
+   },
+   {
+      title: '鼠标脚本',
+      url: 'https://wave.video/embed/638c49b99921fd5ef0b15a73/638c49b99921fd5ef0b15a71.mp4',
+   },
+   {
+      title: '隐藏到后台',
+      url: 'https://wave.video/embed/638c4a85929ed54796d7e6fe/638c4a85929ed54796d7e6fc.mp4',
+   },
+   {
+      title: '自动发消息脚本',
+      url: 'https://wave.video/embed/637e457eead8c97a4fdb16a6/637e457eead8c97a4fdb16a4.mp4',
+   },
+];
+
+// * 点击视频标题时发生
 const setActiveBtn = (key: number) => {
    active.value = key;
 };
 
-const questionsAndAnswersList: QA[] = [
+// * 问答列表
+const questionsAndAnswersList: QAType = [
    {
       createTime: '2020年8月5日',
       questions: '如果 360安全、腾讯安全..等安全软件提示危险程序',
@@ -116,12 +135,12 @@ const questionsAndAnswersList: QA[] = [
          '添加到信任区就ok了。 因为隐藏程序功能是要获取游戏进程的，按键指令也是发送到指定的进程中，so 安全软件们就说是病毒软件啦.',
    },
    {
-      createTime: '2020年2月9日',
+      createTime: '2022年12月04日',
       questions: '启动程序时提示以下信息',
       answers:
-         '电脑操作系统没有安装该软件的运行环境[.net framework 4.0].去微软官网下载并安装，重启程序即可~',
+         '电脑操作系统没有安装该软件的运行环境[.net framework 4.5.2].去微软官网下载并安装，重启程序即可~',
       imgSrc: 'ErrProblem1',
-      link: 'https://www.microsoft.com/de-de/download/details.aspx?id=17718',
+      link: 'https://www.microsoft.com/zh-cn/download/details.aspx?id=42642',
    },
 ];
 </script>
