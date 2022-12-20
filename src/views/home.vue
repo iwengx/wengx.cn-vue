@@ -18,10 +18,7 @@
                   <h2>我的世界小肝助手</h2>
                </div>
                <div>
-                  <button
-                     class="nes-btn is-success"
-                     @click="router.push('lil-liver-helper')"
-                  >
+                  <button class="nes-btn is-success" @click="router.push('lil-liver-helper')">
                      前往下载
                   </button>
                </div>
@@ -46,6 +43,21 @@
       <div class="right-content">
          <div class="base-card slideLeft">
             <div class="card-body">
+               <div style="margin-bottom: 50px">
+                  <b class="nes-badge" style="margin-bottom: 20px">
+                     <span class="is-warning">说 明</span>
+                  </b>
+                  <p>📖 这是一款集成自动钓鱼、自动发消息和鼠标操作的多功能宏脚本软件。</p>
+                  <p>
+                     启动脚本后，它不会影响你电脑上的其他操作，实现完全隔离，你可以一边打其他游戏，一边挂机我的世界。
+                  </p>
+                  <br />
+                  <p>
+                     -
+                     小肝助手会获取你当前的游戏进程，并向该进程发送宏命令，这样就实现了进程间的脚本隔离，从而不影响到其他进程的正常运行。小肝助手不会修改你的游戏数据，也不会修改文件等，它只是在宏脚本的基础上扩展了一些辅助功能。
+                  </p>
+               </div>
+
                <div>
                   <b class="nes-badge" style="margin-bottom: 20px">
                      <span class="is-warning">公 告</span>
@@ -54,12 +66,7 @@
                   <p>- 欢迎加企鹅群(955907864)一起讨论、合作.</p>
                   <br />
                   <div class="space">
-                     <a
-                        target="_blank"
-                        href="https://jq.qq.com/?_wv=1027&k=Yb0G9swZ"
-                     >
-                        一键加群
-                     </a>
+                     <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=Yb0G9swZ"> 一键加群 </a>
                      <a href="#/lil-liver-helper"> 视频教程 </a>
                   </div>
                </div>
@@ -72,10 +79,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import {
-   getToDayWebVisitorsCount,
-   getToDayLilLiverHelperVisitorsCount,
-} from '../api/interface';
+import { getToDayWebVisitorsCount, getToDayLilLiverHelperVisitorsCount } from '../api/interface';
 
 const router = useRouter();
 
