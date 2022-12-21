@@ -63,10 +63,19 @@
                      <span class="is-warning">公 告</span>
                   </b>
                   <p>- 分享给你身边的朋友一起使用，是对我最大的支持和鼓励！</p>
-                  <p>- 欢迎加企鹅群(955907864)一起讨论、合作.</p>
+                  <p>- 欢迎加企鹅群 (724761073 | 955907864) 一起讨论、合作.</p>
                   <br />
                   <div class="space">
-                     <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=Yb0G9swZ"> 一键加群 </a>
+                     <!-- <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=Yb0G9swZ"> 一键加群 </a> -->
+                     <a
+                        target="_blank"
+                        href="https://qm.qq.com/cgi-bin/qm/qr?k=0HMfUmr5QLUiTd3craUDfEj9i7HtgSdz&jump_from=webapi&authKey=R0CDJt+yiyJXUQ6gMUzKrM9Reoep4AYSs+vwoyhW/fAg5YgUchHyAaR8kG8N9Qp8"
+                        ><img
+                           border="0"
+                           src="//pub.idqqimg.com/wpa/images/group.png"
+                           alt="小肝助手交流群-2"
+                           title="小肝助手交流群-2"
+                     /></a>
                      <a href="#/lil-liver-helper"> 视频教程 </a>
                   </div>
                </div>
