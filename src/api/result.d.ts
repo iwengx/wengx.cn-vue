@@ -1,4 +1,4 @@
-interface Result<T> {
+declare interface Result<T> {
    data: T;
    status: number;
 }
@@ -15,4 +15,15 @@ declare namespace Visits {
       seriesData: number[];
       xAxisData: string[];
    }>;
+}
+
+/**
+ * 赞助的返回值类型
+ */
+declare namespace Support {
+   type list = {
+      name: string;
+      time: string;
+      money: string;
+   }[];
 }

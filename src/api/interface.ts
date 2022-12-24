@@ -36,3 +36,19 @@ export const getTenDaysLilLiverHelperEChartsData = () => {
 export const getTenDaysWebEChartsData = () => {
    return http.get<Visits.ResTenDays>('/echarts/visits-web');
 };
+
+/**
+ * 获取赞助列表
+ * @returns
+ */
+export const getSupportListApi = () => {
+   return http.get<Result<Support.list>>('/support-list-api');
+};
+
+/**
+ * 获取赞助榜一大哥信息
+ * @returns
+ */
+export const getSupportFirstApi = () => {
+   return http.get<Result<Support.list>>('/support-first-api');
+};
