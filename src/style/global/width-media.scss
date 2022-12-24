@@ -26,6 +26,15 @@
       grid-template-columns: 1fr !important;
       align-items: center;
    }
+
+   .support-view {
+      table {
+         td,
+         th {
+            padding: 5px 10px !important;
+         }
+      }
+   }
 }
 
 @media screen and (max-width: 576px) {
@@ -41,6 +50,16 @@
 
          .body-header {
             flex-direction: column;
+         }
+      }
+   }
+
+   .support-view {
+      table {
+         td,
+         th {
+            padding: 5px !important;
+            font-size: 1.1rem !important;
          }
       }
    }

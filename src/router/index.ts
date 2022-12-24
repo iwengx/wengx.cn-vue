@@ -30,6 +30,11 @@ const routes = [
             name: 'visits-web',
             component: () => import('../views/visits/web.vue'),
          },
+         {
+            path: 'support',
+            name: '赞助榜页面',
+            component: () => import('../views/support/index.vue'),
+         },
       ],
    },
    {

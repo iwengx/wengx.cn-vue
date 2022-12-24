@@ -1,0 +1,49 @@
+.support-view {
+   width: 100%;
+   padding: 120px 30px 150px;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 50px;
+
+   .support-right {
+      p {
+         font-size: 1.2rem;
+      }
+
+      .play-image-box {
+         padding: 20px;
+         margin-bottom: 50px;
+
+         display: flex;
+         gap: 50px;
+         justify-content: center;
+
+         img {
+            width: 150px;
+         }
+      }
+   }
+
+   table {
+      td,
+      th {
+         font-size: 1.2rem;
+         padding: 5px 20px;
+      }
+
+      tr {
+         border-bottom: 1px solid #c4c4c4;
+         transition: background-color 0.3s;
+
+         &:hover {
+            background-color: #c4c4c4;
+         }
+      }
+   }
+
+   .sub-description {
+      margin: 10px 20px;
+      color: grey;
+   }
+}
