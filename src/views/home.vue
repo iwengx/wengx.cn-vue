@@ -36,6 +36,14 @@
                      <h2>{{ lilLiverHelperVisitorsCount }}</h2>
                   </div>
                </router-link>
+               <router-link to="/support" class="support-box">
+                  <div class="support-brief data-item data-back-3">
+                     <p>赞助榜一</p>
+                     <h3 v-if="supportFirst">
+                        {{ supportFirst.name }} / {{ supportFirst.money }} ￥
+                     </h3>
+                  </div>
+               </router-link>
             </div>
          </div>
       </div>
@@ -88,12 +96,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { getToDayWebVisitorsCount, getToDayLilLiverHelperVisitorsCount } from '../api/interface';
+import {
+   getToDayWebVisitorsCount,
+   getToDayLilLiverHelperVisitorsCount,
+   getSupportFirstApi,
+} from '../api/interface';
 
 const router = useRouter();
 
-let webVisitorsCount = ref(0);
-let lilLiverHelperVisitorsCount = ref(0);
+const webVisitorsCount = ref(0);
+const lilLiverHelperVisitorsCount = ref(0);
+const supportFirst = ref<Support.list[number]>();
 
 getToDayWebVisitorsCount()
    .then((res: any) => {
@@ -106,6 +119,15 @@ getToDayWebVisitorsCount()
 getToDayLilLiverHelperVisitorsCount()
    .then((res: any) => {
       lilLiverHelperVisitorsCount.value = res.data;
+   })
+   .catch((err) => {
+      console.log(err);
+   });
+
+getSupportFirstApi()
+   .then((res) => {
+      supportFirst.value = res.data[0];
+      console.log(res.data[0]);
    })
    .catch((err) => {
       console.log(err);
@@ -149,6 +171,8 @@ getToDayLilLiverHelperVisitorsCount()
       .online-data {
          margin-top: 25px;
          display: flex;
+         flex-wrap: wrap;
+         gap: 30px;
 
          a {
             text-decoration: none;
@@ -160,7 +184,6 @@ getToDayLilLiverHelperVisitorsCount()
          padding: 10px 10px 1px;
          border-radius: 10px;
          transition: filter 0.1s;
-         margin-right: 30px;
          color: white;
          background-size: cover;
          background-position: center;
@@ -180,6 +203,25 @@ getToDayLilLiverHelperVisitorsCount()
 
       .data-back-2 {
          background-image: url('../assets/data-2.jpg');
+      }
+
+      .data-back-3 {
+         background-image: url('../assets/data-3.png');
+      }
+
+      .support-box {
+         flex: 1;
+
+         .support-brief {
+            min-width: 200px;
+            width: 100% !important;
+            height: 100% !important;
+
+            h3 {
+               line-height: 35px;
+               margin-bottom: 0 !important;
+            }
+         }
       }
    }
 
