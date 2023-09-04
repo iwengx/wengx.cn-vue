@@ -70,6 +70,7 @@ getToDayLilLiverHelperVisitorsCount()
 <style lang="scss">
 .wengx-main {
    min-height: 100vh;
+   height: 100vh;
    background-image: url('../assets/wallhaven-z8vk1w.png');
    background-size: cover;
    display: flex;
