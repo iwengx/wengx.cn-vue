@@ -3,8 +3,8 @@
       <Carousel></Carousel>
       <div class="download-box">
          <div>
-            <p><b>我的世界 小肝助手 v2.5.2</b></p>
-            <p>更新日期：2022-12-04</p>
+            <p><b>我的世界 小肝助手 v2.5.3</b></p>
+            <p>更新日期：2023-06-02</p>
             <p>使用 C# .Net Framework 4.5.2 开发.</p>
          </div>
          <div>
@@ -191,7 +191,7 @@ const questionsAndAnswersList: QAType = [
 
    .problem-box {
       max-width: 1000px;
-      padding: 0 20px;
+      padding: 0 20px 150px;
       margin: 0 auto 200px;
    }
 
