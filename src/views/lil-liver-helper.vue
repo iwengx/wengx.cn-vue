@@ -12,7 +12,7 @@
                class="nes-btn is-success"
                style="color: white"
                target="_blank"
-               href="../program/minecraft-lil-liver-helper-v2.5.2.exe"
+               href="../program/minecraft-lil-liver-helper-v2.5.3.exe"
                >立刻下载
             </a>
          </div>
