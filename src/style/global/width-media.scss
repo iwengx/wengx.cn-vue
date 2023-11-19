@@ -17,14 +17,17 @@
          height: auto !important;
       }
 
+      .right-content {
+         margin-top: 50px;
+      }
+
       .main-player-box {
          display: none;
       }
    }
 
-   .home-views {
-      grid-template-columns: 1fr !important;
-      align-items: center;
+   .home-views.home-views {
+      display: block;
    }
 
    .support-view {
