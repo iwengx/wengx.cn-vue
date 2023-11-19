@@ -2,13 +2,14 @@
    <main class="wengx-main">
       <article class="main-body">
          <div class="body-header">
-            <a
-               ><img
+            <a>
+               <img
                   @click="router.push('/')"
                   class="wengxcn-img"
                   src="../assets/wengxcn.png"
                   alt=""
-            /></a>
+               />
+            </a>
             <img class="coolie-fear-img" src="../assets/coolie-fear.png" alt="" />
             <ul class="link-box">
                <li>
@@ -20,7 +21,7 @@
             </ul>
          </div>
 
-         <div class="body-content">
+         <div class="body-content wengx-scrollbar">
             <router-view></router-view>
          </div>
 
@@ -136,26 +137,6 @@ getToDayLilLiverHelperVisitorsCount()
       flex: 1;
       display: flex;
       overflow-y: auto;
-
-      &::-webkit-scrollbar {
-         width: 8px;
-         background: white;
-      }
-      &::-webkit-scrollbar-corner, /* 滚动条角落 */
-         &::-webkit-scrollbar-thumb,
-         &::-webkit-scrollbar-track {
-         border-radius: 4px;
-      }
-      &::-webkit-scrollbar-corner,
-      &::-webkit-scrollbar-track {
-         /* 滚动条轨道 */
-         background-color: rgba(180, 160, 120, 0.1);
-         box-shadow: inset 0 0 1px rgba(180, 160, 120, 0.5);
-      }
-      &::-webkit-scrollbar-thumb {
-         /* 滚动条手柄 */
-         background-color: #4e4e4e;
-      }
    }
 
    .body-footer {
@@ -181,6 +162,12 @@ getToDayLilLiverHelperVisitorsCount()
 
          p {
             display: none;
+            animation-name: overVisible;
+            -webkit-animation-name: overVisible;
+            animation-duration: 0.2s;
+            -webkit-animation-duration: 0.2s;
+            animation-timing-function: ease;
+            -webkit-animation-timing-function: ease;
             transform: translateX(20px);
          }
 

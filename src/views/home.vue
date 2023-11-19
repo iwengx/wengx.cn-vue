@@ -48,7 +48,7 @@
          </div>
       </div>
 
-      <div class="right-content">
+      <div class="right-content wengx-scrollbar">
          <div class="base-card slideLeft">
             <div class="card-body">
                <div style="margin-bottom: 50px">
@@ -226,7 +226,6 @@ getSupportFirstApi()
 
    .right-content {
       height: 610px;
-      overflow: hidden;
 
       .statement-box,
       .version-box {
