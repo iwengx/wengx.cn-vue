@@ -226,6 +226,7 @@ getSupportFirstApi()
 
    .right-content {
       height: 610px;
+      overflow-x: hidden;
 
       .statement-box,
       .version-box {
