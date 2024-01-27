@@ -47,11 +47,14 @@
             </span>
          </div>
          <div class="nes-table is-bordered is-centered" style="padding: 5px 5px 0 5px">
-            <video
+            <!-- <video
                controls
                :src="videoList[active].url"
                style="width: 100%; border-radius: 5px"
-            ></video>
+            ></video> -->
+            <div class="video-description">
+               <span>抱歉，在线视频下架了，目前已转移到群（955907864）文件中</span>
+            </div>
          </div>
       </div>
       <div class="problem-box">
@@ -187,6 +190,14 @@ const questionsAndAnswersList: QAType = [
          width: 100%;
          max-height: 556px;
       }
+   }
+
+   .video-description {
+      height: 350px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
    }
 
    .problem-box {

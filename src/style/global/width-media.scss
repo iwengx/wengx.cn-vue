@@ -51,10 +51,6 @@
 
       .main-body {
          border-radius: 0 !important;
-
-         .body-header {
-            flex-direction: column;
-         }
       }
    }
 
@@ -65,6 +61,18 @@
             padding: 5px !important;
             font-size: 1.1rem !important;
          }
+      }
+   }
+
+   .home-views  {
+      padding-top: 100px !important;
+
+      .online-data {
+         justify-content: space-between;
+      }
+
+      .data-item.data-item.data-item {
+         width: 140px;
       }
    }
 }
