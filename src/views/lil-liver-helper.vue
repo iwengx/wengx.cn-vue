@@ -53,7 +53,7 @@
                style="width: 100%; border-radius: 5px"
             ></video> -->
             <div class="video-description">
-               <span>抱歉，在线视频下架了，目前已转移到群（955907864）文件中</span>
+               <span>视频如果无法播放，转移到群（955907864）文件中</span>
             </div>
          </div>
       </div>
