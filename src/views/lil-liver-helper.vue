@@ -98,25 +98,49 @@ const active = ref(0);
 const videoList: VideoListType = [
    {
       title: '钓鱼机',
-      url: 'https://wave.video/embed/638c476f929ed54796d7e1d3/638c476f929ed54796d7e1d1.mp4',
+      url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/钓鱼机.mp4',
    },
    {
       title: '钓鱼脚本',
-      url: 'https://wave.video/embed/638c48fe9921fd5ef0b1590a/638c48fe9921fd5ef0b15908.mp4',
+      url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/钓鱼脚本.mp4',
    },
    {
       title: '鼠标脚本',
-      url: 'https://wave.video/embed/638c49b99921fd5ef0b15a73/638c49b99921fd5ef0b15a71.mp4',
+      url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/鼠标脚本.mp4',
    },
    {
       title: '隐藏到后台',
-      url: 'https://wave.video/embed/638c4a85929ed54796d7e6fe/638c4a85929ed54796d7e6fc.mp4',
+      url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/隐藏到后台.mp4',
    },
    {
       title: '自动发消息脚本',
-      url: 'https://wave.video/embed/637e457eead8c97a4fdb16a6/637e457eead8c97a4fdb16a4.mp4',
+      url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/自动发消息脚本.mp4',
    },
 ];
+
+// // * 视频列表
+// const videoList: VideoListType = [
+//    {
+//       title: '钓鱼机',
+//       url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/%E9%92%93%E9%B1%BC%E6%9C%BA.mp4',
+//    },
+//    {
+//       title: '钓鱼脚本',
+//       url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/%E9%92%93%E9%B1%BC%E8%84%9A%E6%9C%AC.mp4',
+//    },
+//    {
+//       title: '鼠标脚本',
+//       url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/%E9%BC%A0%E6%A0%87%E8%84%9A%E6%9C%AC.mp4',
+//    },
+//    {
+//       title: '隐藏到后台',
+//       url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/%E9%9A%90%E8%97%8F%E5%88%B0%E5%90%8E%E5%8F%B0.mp4',
+//    },
+//    {
+//       title: '自动发消息脚本',
+//       url: 'https://raw.githubusercontent.com/iwengx/wengx.cn/main/src/assets/video/%E8%87%AA%E5%8A%A8%E5%8F%91%E6%B6%88%E6%81%AF%E8%84%9A%E6%9C%AC.mp4',
+//    },
+// ];
 
 // * 点击视频标题时发生
 const setActiveBtn = (key: number) => {
