@@ -3,8 +3,8 @@
       <Carousel></Carousel>
       <div class="download-box">
          <div>
-            <p><b>我的世界 小肝助手 v2.5.3</b></p>
-            <p>更新日期：2023-06-02</p>
+            <p><b>我的世界 小肝助手 v2.5.4</b></p>
+            <p>更新日期：2024-02-23</p>
             <p>使用 C# .Net Framework 4.5.2 开发.</p>
          </div>
          <div>
@@ -12,7 +12,7 @@
                class="nes-btn is-success"
                style="color: white"
                target="_blank"
-               href="../program/minecraft-lil-liver-helper-v2.5.3.exe"
+               href="../program/minecraft-lil-liver-helper-v2.5.4.exe"
                >立刻下载
             </a>
          </div>
