@@ -1,7 +1,9 @@
 <template>
    <main class="wengx-main">
       <article class="main-body">
-         <div class="body-header">
+         <img class="coolie-fear-img" src="../assets/coolie-fear.png" alt="" />
+
+         <!-- <div class="body-header">
             <a>
                <img
                   @click="router.push('/')"
@@ -10,7 +12,6 @@
                   alt=""
                />
             </a>
-            <img class="coolie-fear-img" src="../assets/coolie-fear.png" alt="" />
             <ul class="link-box">
                <li>
                   <a @click="toGitHub">
@@ -19,7 +20,7 @@
                   </a>
                </li>
             </ul>
-         </div>
+         </div> -->
 
          <div class="body-content wengx-scrollbar">
             <router-view></router-view>
@@ -75,7 +76,6 @@ getToDayLilLiverHelperVisitorsCount()
    background-image: url('../assets/wallhaven-z8vk1w.png');
    background-size: cover;
    display: flex;
-   flex-direction: column;
    justify-content: center;
    align-items: center;
    padding: 40px;
@@ -84,9 +84,9 @@ getToDayLilLiverHelperVisitorsCount()
 .wengx-main .main-body {
    position: relative;
    width: 100%;
-   max-width: 1680px;
+   max-width: 1510px;
    height: 100%;
-   max-height: 1000px;
+   max-height: 900px;
 
    flex: 1;
    display: flex;
@@ -97,6 +97,18 @@ getToDayLilLiverHelperVisitorsCount()
 
    background-image: url('../assets/bg-wool-light.png');
    background-size: cover;
+
+   .coolie-fear-img {
+      position: absolute;
+      right: 0;
+      top: 50px;
+      width: 68px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+         transform: scale(1.2);
+      }
+   }
 
    .body-header {
       position: absolute;
@@ -110,18 +122,6 @@ getToDayLilLiverHelperVisitorsCount()
       .wengxcn-img {
          width: 114px;
          height: 24px;
-      }
-
-      .coolie-fear-img {
-         position: absolute;
-         right: 0;
-         bottom: -50px;
-         width: 68px;
-         transition: transform 0.2s ease;
-
-         &:hover {
-            transform: scale(1.2);
-         }
       }
 
       .link-box {
@@ -144,7 +144,7 @@ getToDayLilLiverHelperVisitorsCount()
       bottom: 0;
 
       width: 100%;
-      height: 150px;
+      height: 100px;
 
       background-image: url('../assets/trans-bottom-darkwool.png');
       background-repeat: repeat-x;
@@ -172,7 +172,7 @@ getToDayLilLiverHelperVisitorsCount()
          }
 
          img {
-            width: 180px;
+            width: 150px;
             vertical-align: text-top;
          }
       }

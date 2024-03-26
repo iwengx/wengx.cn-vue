@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Zpix' !important;
+   // font-family: 'Zpix';
 }
 
 @font-face {
@@ -14,7 +14,13 @@ img {
    width: 100%;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
    margin-bottom: 0;
 }
 
@@ -79,4 +85,45 @@ button {
       /* 滚动条手柄 */
       background-color: #4e4e4e;
    }
+}
+
+.flex-column-start {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.minecraft-btn2 {
+   color: #fff;
+   background-color: #488344;
+   position: relative;
+   border: none;
+   cursor: pointer;
+}
+
+.minecraft-btn2:hover {
+   background-color: #579952;
+}
+
+.minecraft-btn2::after,
+.minecraft-btn2::before {
+   width: 50%;
+   height: 6px;
+   background: #366233;
+   position: absolute;
+   bottom: -6px;
+}
+
+.minecraft-btn2::after {
+   content: '';
+   right: 2.5px;
+   -webkit-transform: skewX(-35deg);
+   transform: skewX(-35deg);
+}
+
+.minecraft-btn2::before {
+   content: '';
+   left: 2px;
+   -webkit-transform: skewX(35deg);
+   transform: skewX(35deg);
 }

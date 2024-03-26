@@ -1,7 +1,14 @@
 <template>
    <div class="home-views">
       <div class="left-content slideRight">
-         <table class="nes-table is-bordered is-centered">
+         <div class="flex-column-start">
+            <h1 class="software-title">我的世界<span class="light-text">小肝助手</span></h1>
+            <h1 class="software-title">Minecraft Lil Liver Helper</h1>
+            <h2 class="software-description">一款免费的无感挂机的宏脚本软件</h2>
+            <div class="minecraft-btn2 download-btn">免费下载</div>
+         </div>
+
+         <!-- <table class="nes-table is-bordered is-centered">
             <tbody>
                <tr>
                   <td style="padding: 0">
@@ -45,13 +52,13 @@
                   </div>
                </router-link>
             </div>
-         </div>
+         </div> -->
       </div>
 
       <div class="right-content wengx-scrollbar">
          <div class="base-card slideLeft">
             <div class="card-body">
-               <div style="margin-bottom: 50px">
+               <!-- <div style="margin-bottom: 50px">
                   <b class="nes-badge" style="margin-bottom: 20px">
                      <span class="is-warning">说 明</span>
                   </b>
@@ -64,29 +71,7 @@
                      -
                      小肝助手会获取你当前的游戏进程，并向该进程发送宏命令，这样就实现了进程间的脚本隔离，从而不影响到其他进程的正常运行。小肝助手不会修改你的游戏数据，也不会修改文件等，它只是在宏脚本的基础上扩展了一些辅助功能。
                   </p>
-               </div>
-
-               <div>
-                  <b class="nes-badge" style="margin-bottom: 20px">
-                     <span class="is-warning">公 告</span>
-                  </b>
-                  <p>- 分享给你身边的朋友一起使用，是对我最大的支持和鼓励！</p>
-                  <p>- 欢迎加企鹅群 (955907864 | 724761073) 一起讨论、合作.</p>
-                  <br />
-                  <div class="space">
-                     <!-- <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=Yb0G9swZ"> 一键加群 </a> -->
-                     <a
-                        target="_blank"
-                        href="https://qm.qq.com/cgi-bin/qm/qr?k=0HMfUmr5QLUiTd3craUDfEj9i7HtgSdz&jump_from=webapi&authKey=R0CDJt+yiyJXUQ6gMUzKrM9Reoep4AYSs+vwoyhW/fAg5YgUchHyAaR8kG8N9Qp8"
-                        ><img
-                           border="0"
-                           src="//pub.idqqimg.com/wpa/images/group.png"
-                           alt="小肝助手交流群-2"
-                           title="小肝助手交流群-2"
-                     /></a>
-                     <a href="#/lil-liver-helper"> 视频教程 </a>
-                  </div>
-               </div>
+               </div> -->
             </div>
          </div>
       </div>
@@ -135,15 +120,37 @@ getSupportFirstApi()
 
 <style lang="scss">
 .home-views {
+   flex: 1;
    display: grid;
    grid-template-columns: 1fr 1fr;
    gap: 50px;
+   padding: 20px 20px 100px;
    align-items: center;
-   padding: 120px 30px 150px;
-   flex: 1;
+   justify-items: center;
 
    .left-content {
-      height: 610px;
+      .software-title {
+         font-size: 2.5rem;
+         text-shadow: 0 2px 0 #666;
+      }
+
+      .software-description {
+         color: #666;
+         font-size: 1.5rem;
+         font-weight: 500;
+         margin: 12px 0 24px;
+      }
+
+      .light-text {
+         color: #3c8527;
+         text-shadow: 0 2px 0 #2a641c;
+      }
+
+      .download-btn {
+         font-size: 1.2rem;
+         padding: 12px 20px;
+         font-family: 'Zpix';
+      }
 
       table {
          margin: 0 auto;
