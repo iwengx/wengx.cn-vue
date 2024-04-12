@@ -1,24 +1,18 @@
 <template>
    <div class="home-views">
       <div class="left-content slideRight">
-         <table class="nes-table is-bordered is-centered">
-            <tbody>
-               <tr>
-                  <td style="padding: 0">
-                     <img src="../assets/lil-liver-helper/home.jpg" alt="" />
-                     <img src="../assets/free.png" class="free-png" />
-                  </td>
-               </tr>
-            </tbody>
-         </table>
+         <div class="black-border">
+            <img src="../assets/lil-liver-helper/home.jpg" alt="" />
+            <img src="../assets/free.png" class="free-png" />
+         </div>
          <div class="text-container">
             <div class="brief-box">
                <div>
-                  <p>本站主要软件:</p>
                   <h2>我的世界小肝助手</h2>
+                  <p>一款免费的无感挂机的宏脚本软件</p>
                </div>
                <div>
-                  <button class="nes-btn is-success" @click="router.push('lil-liver-helper')">
+                  <button class="minecraft-btn2" @click="router.push('lil-liver-helper')">
                      前往下载
                   </button>
                </div>
@@ -53,39 +47,29 @@
             <div class="card-body">
                <div style="margin-bottom: 50px">
                   <b class="nes-badge" style="margin-bottom: 20px">
-                     <span class="is-warning">说 明</span>
+                     <span class="is-warning">简 述</span>
                   </b>
-                  <p>📖 这是一款集成自动钓鱼、自动发消息和鼠标操作的多功能宏脚本软件。</p>
+                  <p>这是一款集成自动钓鱼、自动发消息和鼠标操作的多功能宏脚本软件。启动脚本后，它不会影响你电脑上的其他操作，实现完全隔离，你可以一边打其他游戏，一边挂机我的世界。</p>
+               </div>
+
+               <div style="margin-bottom: 50px">
+                  <b class="nes-badge" style="margin-bottom: 20px">
+                     <span class="is-warning">逻 辑</span>
+                  </b>
                   <p>
-                     启动脚本后，它不会影响你电脑上的其他操作，实现完全隔离，你可以一边打其他游戏，一边挂机我的世界。
-                  </p>
-                  <br />
-                  <p>
-                     -
                      小肝助手会获取你当前的游戏进程，并向该进程发送宏命令，这样就实现了进程间的脚本隔离，从而不影响到其他进程的正常运行。小肝助手不会修改你的游戏数据，也不会修改文件等，它只是在宏脚本的基础上扩展了一些辅助功能。
                   </p>
                </div>
 
                <div>
                   <b class="nes-badge" style="margin-bottom: 20px">
-                     <span class="is-warning">公 告</span>
+                     <span class="is-warning">关注 / 反馈</span>
                   </b>
-                  <p>- 分享给你身边的朋友一起使用，是对我最大的支持和鼓励！</p>
-                  <p>- 欢迎加企鹅群 (955907864 | 724761073) 一起讨论、合作.</p>
-                  <br />
-                  <div class="space">
-                     <!-- <a target="_blank" href="https://jq.qq.com/?_wv=1027&k=Yb0G9swZ"> 一键加群 </a> -->
-                     <a
-                        target="_blank"
-                        href="https://qm.qq.com/cgi-bin/qm/qr?k=0HMfUmr5QLUiTd3craUDfEj9i7HtgSdz&jump_from=webapi&authKey=R0CDJt+yiyJXUQ6gMUzKrM9Reoep4AYSs+vwoyhW/fAg5YgUchHyAaR8kG8N9Qp8"
-                        ><img
-                           border="0"
-                           src="//pub.idqqimg.com/wpa/images/group.png"
-                           alt="小肝助手交流群-2"
-                           title="小肝助手交流群-2"
-                     /></a>
-                     <a href="#/lil-liver-helper"> 视频教程 </a>
-                  </div>
+                  <p>
+                     欢迎加入我们的企鹅群 955907864、724761073 一起交流。当然，如果可以的话最好给我的 
+                     <a class="github-text" @click="toGitHub">GitHub</a> 
+                     点一个 Star，非常感谢。
+                  </p>
                </div>
             </div>
          </div>
@@ -131,6 +115,10 @@ getSupportFirstApi()
    .catch((err) => {
       console.log(err);
    });
+
+const toGitHub = () => {
+   window.open('https://github.com/iwengx/Minecraft-Lil-liver-helper');
+};
 </script>
 
 <style lang="scss">
@@ -144,21 +132,23 @@ getSupportFirstApi()
 
    .left-content {
       height: 610px;
+      max-width: 648px;
+      margin: 0 auto;
 
       table {
          margin: 0 auto;
       }
 
       .free-png {
+         width: 68px;
          position: absolute;
+         z-index: 10;
          top: -12px;
          right: -27px;
          transform: rotate(25deg);
-         width: 68px;
       }
 
       .text-container {
-         max-width: 648px;
          margin: 20px auto 10px;
       }
 
@@ -180,9 +170,10 @@ getSupportFirstApi()
 
       .data-item {
          width: 150px;
-         padding: 10px 10px 1px;
+         opacity: 0.6;
          border-radius: 10px;
-         transition: filter 0.1s;
+         padding: 10px 10px 1px;
+         transition: filter 0.1s, opacity 0.1s;
          color: white;
          background-size: cover;
          background-position: center;
@@ -192,7 +183,8 @@ getSupportFirstApi()
          }
 
          &:hover {
-            filter: drop-shadow(2px 4px 6px black);
+            opacity: 1;
+            filter: drop-shadow(2px 4px 6px #999);
          }
       }
 
@@ -233,9 +225,9 @@ getSupportFirstApi()
          margin-top: 35px;
       }
 
-      .space {
-         display: flex;
-         gap: 20px;
+      .github-text {
+         font-weight: bold;
+         font-family: 'Zpix';
       }
    }
 }

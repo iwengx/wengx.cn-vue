@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Zpix' !important;
+   // font-family: 'Zpix' !important;
 }
 
 @font-face {
@@ -79,4 +79,95 @@ button {
       /* 滚动条手柄 */
       background-color: #4e4e4e;
    }
+}
+
+.black-border {
+   padding: 3px;
+   border-left: 5px solid #333;
+   border-right: 5px solid #333;
+   position: relative;
+}
+
+.black-border::before,
+.black-border::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: -5px;
+   background-color: #333;
+   width: 100%;
+   height: 5px;
+}
+
+.black-border::before {
+   top: unset;
+   bottom: -5px;
+}
+
+
+.minecraft-btn1 {
+   font-family: 'Zpix' !important;
+   padding: 12px 24px;
+   color: #fff;
+   font-weight: bold;
+   background: #3c8527;
+   text-shadow: 0 2px 0 #2a641c;
+   box-shadow: inset 0 -4px 0 #2a641c, inset 0 4px 0 #52a535;
+   position: relative;
+}
+
+.minecraft-btn1::after,
+.minecraft-btn1::before {
+   content: '';
+   position: absolute;
+   background: #2a641c;
+   height: calc(100% - 8px);
+   top: 4px;
+   width: 0.25rem;
+   left: -0.25rem;
+}
+
+.minecraft-btn1::after {
+   left: unset;
+   right: -0.25rem;
+}
+
+.minecraft-btn1:hover {
+   background-color: #3c8527e8;
+}
+
+.minecraft-btn2 {
+   padding: 10px 20px;
+   color: #fff;
+   font-family: 'Zpix' !important;
+   background-color: #488344;
+   position: relative;
+   border: none;
+}
+
+.minecraft-btn2:hover {
+   background-color: #579952;
+}
+
+.minecraft-btn2::after,
+.minecraft-btn2::before {
+   width: 50%;
+   height: 6px;
+   background: #366233;
+   position: absolute;
+   bottom: -6px;
+}
+
+.minecraft-btn2::after {
+   content: '';
+   right: 2.5px;
+   -webkit-transform: skewX(-35deg);
+   transform: skewX(-35deg);
+}
+
+.minecraft-btn2::before {
+   content: '';
+   left: 2px;
+   -webkit-transform: skewX(35deg);
+   transform: skewX(35deg);
 }

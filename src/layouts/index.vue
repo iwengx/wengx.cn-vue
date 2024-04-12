@@ -11,14 +11,6 @@
                />
             </a>
             <img class="coolie-fear-img" src="../assets/coolie-fear.png" alt="" />
-            <ul class="link-box">
-               <li>
-                  <a @click="toGitHub">
-                     <i class="nes-icon github is-small" style="vertical-align: middle"></i>
-                     <span> iwengx</span>
-                  </a>
-               </li>
-            </ul>
          </div>
 
          <div class="body-content wengx-scrollbar">
@@ -46,10 +38,6 @@ const router = useRouter();
 
 let webVisitorsCount = ref(0);
 let lilLiverHelperVisitorsCount = ref(0);
-
-const toGitHub = () => {
-   window.open('https://github.com/iwengx');
-};
 
 getToDayWebVisitorsCount()
    .then((res: any) => {
@@ -172,7 +160,7 @@ getToDayLilLiverHelperVisitorsCount()
          }
 
          img {
-            width: 180px;
+            width: 150px;
             vertical-align: text-top;
          }
       }
