@@ -1,38 +1,39 @@
 <template>
    <div class="lil-liver-helper-view">
       <Carousel></Carousel>
-      <div class="download-box">
-         <div>
-            <p><b>我的世界 小肝助手 v2.5.4</b></p>
-            <p>更新日期：2024-02-23</p>
-            <p>使用 C# .Net Framework 4.5.2 开发.</p>
+      <div class="container">
+         <div class="demonstrate-box slideRight">
+            <div class="demonstrate-item">
+               <div class="demonstrate-description">全自动钓鱼</div>
+               <img src="../assets/lil-liver-helper/diaoyuDemonstration.gif" alt="全自动钓鱼" />
+            </div>
+            <div class="demonstrate-item">
+               <div class="demonstrate-description">隐藏到后台挂机</div>
+               <img src="../assets/lil-liver-helper/HideProgram.gif" alt="隐藏到后台挂机" />
+            </div>
+            <div class="demonstrate-item">
+               <div class="demonstrate-description">鼠标连点</div>
+               <img src="../assets/lil-liver-helper/liandianDemonstration.gif" alt="鼠标连点" />
+            </div>
+            <div class="demonstrate-item">
+               <div class="demonstrate-description">自动发消息</div>
+               <img src="../assets/lil-liver-helper/SendInfo.gif" alt="自动发消息" />
+            </div>
          </div>
-         <div>
-            <a
-               class="nes-btn is-success"
-               style="color: white"
-               target="_blank"
-               href="../program/minecraft-lil-liver-helper-v2.5.4.exe"
-               >立刻下载
-            </a>
-         </div>
-      </div>
-      <div class="demo-box">
-         <div class="demo-item">
-            <h3>&#10024; 全自动钓鱼</h3>
-            <img src="../assets/lil-liver-helper/diaoyuDemonstration.gif" alt="全自动钓鱼" />
-         </div>
-         <div class="demo-item">
-            <h3>&#11088; 隐藏到后台挂机</h3>
-            <img src="../assets/lil-liver-helper/HideProgram.gif" alt="隐藏到后台挂机" />
-         </div>
-         <div class="demo-item">
-            <h3>&#127775; 鼠标连点</h3>
-            <img src="../assets/lil-liver-helper/liandianDemonstration.gif" alt="鼠标连点" />
-         </div>
-         <div class="demo-item">
-            <h3>&#11088; 自动发消息</h3>
-            <img src="../assets/lil-liver-helper/SendInfo.gif" alt="自动发消息" />
+         <div class="download-box slideLeft">
+            <div>
+               <h1 class="software-title">我的世界<span class="light-text">小肝助手</span></h1>
+               <h1 class="software-title">Minecraft Lil Liver Helper</h1>
+               <h2 class="software-description">一款免费的无感挂机的宏脚本软件</h2>
+               <button
+                  class="minecraft-btn2 download-button base-btn"
+                  style="color: white"
+                  target="_blank"
+                  href="../program/minecraft-lil-liver-helper-v2.5.4.exe"
+               >
+                  立刻下载 v2.5.4
+               </button>
+            </div>
          </div>
       </div>
       <div class="using-box">
@@ -46,14 +47,17 @@
                {{ btn.title }}
             </span>
          </div>
-         <div class="nes-table is-bordered is-centered" style="padding: 5px 5px 0 5px">
+         <div class="black-border" style="padding: 5px 5px 0 5px">
             <!-- <video
                controls
                :src="videoList[active].url"
                style="width: 100%; border-radius: 5px"
             ></video> -->
             <div class="video-description">
-               <span>抱歉，在线视频下架了，目前已转移到（一群：955907864 快满了 | 二群：7247610731）群文件中</span>
+               <span>
+                  抱歉，在线视频下架了，目前已转移到（一群：955907864 快满了 |
+                  二群：7247610731）群文件中
+               </span>
             </div>
          </div>
       </div>
@@ -149,40 +153,90 @@ const questionsAndAnswersList: QAType = [
 </script>
 
 <style lang="scss">
+$maxWidth: 1200px;
+
 .lil-liver-helper-view {
    width: 100%;
    height: 100%;
    padding-top: 100px;
 
-   .download-box {
-      max-width: 698px;
+   .container {
+      max-width: $maxWidth;
+      height: 400px;
+      margin: 100px auto;
       padding: 0 20px;
-      margin: 40px auto 80px;
       display: flex;
-      justify-content: space-between;
+      align-items: center;
    }
 
-   .demo-box {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 20px;
-
+   .download-box {
+      margin-left: auto;
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+      justify-content: space-between;
 
-      .demo-item {
+      .software-title {
+         font-size: 2.5rem;
+         text-shadow: 0 2px 0 #666;
+      }
+
+      .software-description {
+         color: #666;
+         font-weight: 500;
+      }
+
+      .light-text {
+         color: #3c8527;
+         text-shadow: 0 2px 0 #2a641c;
+      }
+
+      .download-button {
+         margin-top: 10px;
+         display: inline-block;
+      }
+   }
+
+   .demonstrate-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .demonstrate-item {
          max-width: 250px;
+         margin-right: 20px;
          margin-bottom: 20px;
+         border-radius: 5px;
+         overflow: hidden;
+         position: relative;
+
+         .demonstrate-description {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            background-color: rgba(51, 51, 51, 0.8);
+            text-align: center;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            transition: bottom 0.2s;
+         }
 
          img {
-            border-radius: 5px;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+         }
+
+         &:hover .demonstrate-description {
+            bottom: -40px;
+         }
+
+         &:hover img {
+            opacity: 1;
          }
       }
    }
 
    .using-box {
-      max-width: 1000px;
+      max-width: $maxWidth;
       margin: 100px auto;
       padding: 0 20px;
 
@@ -201,7 +255,7 @@ const questionsAndAnswersList: QAType = [
    }
 
    .problem-box {
-      max-width: 1000px;
+      max-width: $maxWidth;
       padding: 0 20px 150px;
       margin: 0 auto 200px;
    }
