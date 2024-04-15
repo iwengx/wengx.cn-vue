@@ -36,8 +36,8 @@ import { getToDayWebVisitorsCount, getToDayLilLiverHelperVisitorsCount } from '.
 
 const router = useRouter();
 
-let webVisitorsCount = ref(0);
-let lilLiverHelperVisitorsCount = ref(0);
+const webVisitorsCount = ref(0);
+const lilLiverHelperVisitorsCount = ref(0);
 
 getToDayWebVisitorsCount()
    .then((res: any) => {

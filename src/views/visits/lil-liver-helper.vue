@@ -2,7 +2,6 @@
    <div class="visits-llh-page">
       <p class="title">&#10024; 小肝助手访问量可视化曲线图</p>
       <p class="explanation">说明: 每位玩家当日打开就算一次，多次打开也只算一次。</p>
-
       <div class="echarts-main" id="main" v-if="isMainChartInit"></div>
    </div>
 </template>
@@ -12,7 +11,7 @@ import { onMounted, ref, onBeforeUnmount } from 'vue';
 import { getTenDaysLilLiverHelperEChartsData } from '../../api/interface';
 import { ECOption, init } from './common/init-echart';
 
-let isMainChartInit = ref(true);
+const isMainChartInit = ref(true);
 
 onMounted(() => {
    const chartDom = document.getElementById('main') as HTMLDivElement;
