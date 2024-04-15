@@ -10,17 +10,14 @@
 <script setup lang="ts">
 import { onMounted, ref, onBeforeUnmount } from 'vue';
 import { getTenDaysLilLiverHelperEChartsData } from '../../api/interface';
-import * as echarts from 'echarts';
-
-type EChartsOption = echarts.EChartsOption;
+import { ECOption, init } from './common/init-echart';
 
 let isMainChartInit = ref(true);
 
 onMounted(() => {
-   let chartDom = document.getElementById('main')!;
-   let myChart = echarts.init(chartDom);
+   const chartDom = document.getElementById('main') as HTMLDivElement;
 
-   let option: EChartsOption = {
+   let option: ECOption = {
       tooltip: {
          trigger: 'axis',
       },
@@ -45,19 +42,20 @@ onMounted(() => {
 
    getTenDaysLilLiverHelperEChartsData()
       .then((res) => {
-         (option.xAxis as any).data = res.data.xAxisData;
-         (option.series as any)[0].data = res.data.seriesData;
+         // @ts-ignore
+         option.xAxis.data = res.data.xAxisData;
+         // @ts-ignore
+         option.series[0].data = res.data.seriesData;
+
+         const myChart = init(chartDom, option);
+
+         window.onresize = function () {
+            myChart.resize();
+         };
       })
       .catch((err) => {
          console.log(err.message);
-      })
-      .finally(() => {
-         myChart.setOption(option);
       });
-
-   window.onresize = function () {
-      myChart.resize();
-   };
 
    onBeforeUnmount(() => {
       isMainChartInit.value = false;
