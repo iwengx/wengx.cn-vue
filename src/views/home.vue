@@ -2,13 +2,7 @@
    <div class="home-views">
       <div class="left-content slideRight">
          <div class="black-border program-main">
-            <div class="img-mask" :class="{ 'img-mask-hidden' : !loading }"></div>
-            <img 
-               class="program-img"
-               :class="{ 'program-img-hidden': loading}"
-               src="../assets/lil-liver-helper/home.jpg"
-               @load="onProgramImgLoad"
-            />
+            <TransitionImage src="lil-liver-helper/home.jpg" :scale="0.625"></TransitionImage>
             <img src="../assets/free.png" class="free-png" />
          </div>
          <div class="text-container">
@@ -55,7 +49,9 @@
                   <b class="nes-badge" style="margin-bottom: 20px">
                      <span class="is-warning">简 述</span>
                   </b>
-                  <p>这是一款集成自动钓鱼、自动发消息和鼠标操作的多功能宏脚本软件。启动脚本后，它不会影响你电脑上的其他操作，实现完全隔离，你可以一边打其他游戏，一边挂机我的世界。</p>
+                  <p>
+                     这是一款集成自动钓鱼、自动发消息和鼠标操作的多功能宏脚本软件。启动脚本后，它不会影响你电脑上的其他操作，实现完全隔离，你可以一边打其他游戏，一边挂机我的世界。
+                  </p>
                </div>
 
                <div style="margin-bottom: 50px">
@@ -72,8 +68,9 @@
                      <span class="is-warning">关注 / 反馈</span>
                   </b>
                   <p>
-                     欢迎加入我们的企鹅群 955907864、724761073 一起交流。当然，如果可以的话最好给我的 
-                     <a class="github-text" @click="toGitHub">GitHub</a> 
+                     欢迎加入我们的企鹅群 955907864、724761073
+                     一起交流。当然，如果可以的话最好给我的
+                     <a class="github-text" @click="toGitHub">GitHub</a>
                      点一个 Star，非常感谢。
                   </p>
                </div>
@@ -86,16 +83,14 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { useImageLoading } from '../utils/hooks/useImageLoading';
 import {
    getToDayWebVisitorsCount,
    getToDayLilLiverHelperVisitorsCount,
    getSupportFirstApi,
-} from '../api/interface';
+} from '@/api/interface';
+import TransitionImage from '@/components/transition-image.vue';
 
 const router = useRouter();
-
-const {loading, onLoad: onProgramImgLoad } = useImageLoading()
 
 const webVisitorsCount = ref(0);
 const lilLiverHelperVisitorsCount = ref(0);
@@ -145,8 +140,6 @@ const toGitHub = () => {
       margin: 0 auto;
 
       .program-main {
-         min-height: 401px;
-
          .img-mask {
             width: 100%;
             height: 100%;
