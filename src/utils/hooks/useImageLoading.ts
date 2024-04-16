@@ -1,14 +1,14 @@
-import { ref } from "vue";
+import { ref } from 'vue';
 
 export const useImageLoading = () => {
-  const loading = ref(true);
+   const loading = ref(true);
 
-  const onLoad = () => {
-    loading.value = false;
-  };
+   const onLoad = () => {
+      loading.value = false;
+   };
 
-  return {
-    loading,
-    onLoad,
-  };
+   return {
+      loading,
+      onLoad,
+   };
 };
