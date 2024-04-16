@@ -1,8 +1,14 @@
 <template>
    <div class="home-views">
       <div class="left-content slideRight">
-         <div class="black-border">
-            <img src="../assets/lil-liver-helper/home.jpg" alt="" />
+         <div class="black-border program-main">
+            <div class="img-mask" :class="{ 'img-mask-hidden' : !loading }"></div>
+            <img 
+               class="program-img"
+               :class="{ 'program-img-hidden': loading}"
+               src="../assets/lil-liver-helper/home.jpg"
+               @load="onProgramImgLoad"
+            />
             <img src="../assets/free.png" class="free-png" />
          </div>
          <div class="text-container">
@@ -80,6 +86,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { useImageLoading } from '../utils/hooks/useImageLoading';
 import {
    getToDayWebVisitorsCount,
    getToDayLilLiverHelperVisitorsCount,
@@ -87,6 +94,8 @@ import {
 } from '../api/interface';
 
 const router = useRouter();
+
+const {loading, onLoad: onProgramImgLoad } = useImageLoading()
 
 const webVisitorsCount = ref(0);
 const lilLiverHelperVisitorsCount = ref(0);
@@ -135,8 +144,30 @@ const toGitHub = () => {
       max-width: 648px;
       margin: 0 auto;
 
-      table {
-         margin: 0 auto;
+      .program-main {
+         min-height: 401px;
+
+         .img-mask {
+            width: 100%;
+            height: 100%;
+            background-color: #9999995c;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: background-color 0.5s;
+         }
+
+         .img-mask-hidden {
+            background-color: #9990;
+         }
+
+         .program-img {
+            transition: opacity 0.5s;
+         }
+
+         .program-img-hidden {
+            opacity: 0;
+         }
       }
 
       .free-png {
