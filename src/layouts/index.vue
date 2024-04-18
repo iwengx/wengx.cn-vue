@@ -62,15 +62,16 @@ getToDayLilLiverHelperVisitorsCount()
 
 <style lang="scss">
 .wengx-main {
-   min-height: 100vh;
    height: 100vh;
+   min-height: 100vh;
+   padding: 40px;
+   background-color: #d8d8d8;
    background-image: url('../assets/wallhaven-z8vk1w.png');
    background-size: cover;
    display: flex;
+   align-items: center;
    flex-direction: column;
    justify-content: center;
-   align-items: center;
-   padding: 40px;
 }
 
 .wengx-main .main-body {
