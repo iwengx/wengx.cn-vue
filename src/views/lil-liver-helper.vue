@@ -5,19 +5,27 @@
          <div class="demonstrate-box slideRight">
             <div class="demonstrate-item">
                <div class="demonstrate-description">全自动钓鱼</div>
-               <img src="../assets/lil-liver-helper/diaoyuDemonstration.gif" alt="全自动钓鱼" />
+               <TransitionImage :scale="0.542">
+                  <img src="../assets/lil-liver-helper/diaoyuDemonstration.gif" alt="全自动钓鱼" />
+               </TransitionImage>
             </div>
             <div class="demonstrate-item">
                <div class="demonstrate-description">隐藏到后台挂机</div>
-               <img src="../assets/lil-liver-helper/HideProgram.gif" alt="隐藏到后台挂机" />
+               <TransitionImage :scale="0.542">
+                  <img src="../assets/lil-liver-helper/HideProgram.gif" alt="隐藏到后台挂机" />
+               </TransitionImage>
             </div>
             <div class="demonstrate-item">
                <div class="demonstrate-description">鼠标连点</div>
-               <img src="../assets/lil-liver-helper/liandianDemonstration.gif" alt="鼠标连点" />
+               <TransitionImage :scale="0.542">
+                  <img src="../assets/lil-liver-helper/liandianDemonstration.gif" alt="鼠标连点" />
+               </TransitionImage>
             </div>
             <div class="demonstrate-item">
                <div class="demonstrate-description">自动发消息</div>
-               <img src="../assets/lil-liver-helper/SendInfo.gif" alt="自动发消息" />
+               <TransitionImage :scale="0.542">
+                  <img src="../assets/lil-liver-helper/SendInfo.gif" alt="自动发消息" />
+               </TransitionImage>
             </div>
          </div>
          <div class="download-box slideLeft">
@@ -84,7 +92,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import Carousel from '../components/carousel.vue';
+import Carousel from '@/components/carousel.vue';
+import TransitionImage from '@/components/transition-image.vue';
 
 // function getVideoUrl(name: string) {
 //    return new URL(`../assets/video/${name}.mp4`, import.meta.url).href;
@@ -162,11 +171,12 @@ $maxWidth: 1200px;
 
    .container {
       max-width: $maxWidth;
-      height: 400px;
+      min-height: 400px;
       margin: 100px auto;
       padding: 0 20px;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
    }
 
    .download-box {
@@ -196,10 +206,12 @@ $maxWidth: 1200px;
    }
 
    .demonstrate-box {
+      width: 540px;
       display: grid;
       grid-template-columns: 1fr 1fr;
 
       .demonstrate-item {
+         width: calc(100% - 20px);
          max-width: 250px;
          margin-right: 20px;
          margin-bottom: 20px;

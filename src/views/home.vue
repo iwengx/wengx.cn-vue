@@ -2,7 +2,9 @@
    <div class="home-views">
       <div class="left-content slideRight">
          <div class="black-border program-main">
-            <TransitionImage src="lil-liver-helper/home.jpg" :scale="0.625"></TransitionImage>
+            <TransitionImage :scale="0.625">
+               <img src="../assets/lil-liver-helper/home.jpg" />
+            </TransitionImage>
             <img src="../assets/free.png" class="free-png" />
          </div>
          <div class="text-container">
@@ -135,6 +137,7 @@ const toGitHub = () => {
    flex: 1;
 
    .left-content {
+      width: 100%;
       height: 610px;
       max-width: 648px;
       margin: 0 auto;

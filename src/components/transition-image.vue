@@ -1,22 +1,17 @@
 <template>
    <div class="transition-image-container" ref="imageContainerEl">
       <div class="img-mask" :class="{ 'img-mask-hidden': !loading }"></div>
-      <img
-         class="image"
-         :class="{ 'image-hidden': loading }"
-         :src="importImage(props.src)"
-         @load="onProgramImgLoad"
-      />
+      <slot></slot>
    </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { importImage } from '@/utils/import';
+import { ref, onMounted, useSlots } from 'vue';
 import { useImageLoading } from '@/utils/hooks/useImageLoading';
 
+const slots = useSlots();
+
 interface Props {
-   src: string; // 图片路径
    scale: number; // 宽 ÷ 高 = 宽高比
 }
 const props = withDefaults(defineProps<Props>(), {});
@@ -33,11 +28,22 @@ const onProgramImgLoad = () => {
    }
 };
 
+const defaultSlot = slots.default && slots.default()[0];
+if (defaultSlot && defaultSlot.type === 'img') {
+   defaultSlot.props = {
+      ...(defaultSlot.props || {}),
+      class: `image ${loading ? 'image-hidden' : ''}`,
+      onLoad: onProgramImgLoad,
+   };
+}
+
 onMounted(() => {
    // 在初始化时计算出高度并赋值给容器元素
    if (imageContainerEl.value && props.scale) {
       const { width } = imageContainerEl.value.getBoundingClientRect();
+      console.log('width :>> ', width);
       const height = width * props.scale;
+      console.log('height :>> ', height);
       imageContainerEl.value.style.height = `${height}px`;
    }
 });
