@@ -3,9 +3,9 @@
       <div class="left-content slideRight">
          <div class="black-border program-main">
             <TransitionImage :scale="0.625">
-               <img src="../assets/lil-liver-helper/home.jpg" />
+               <img src="https://img2.imgtp.com/2024/04/19/Ghn2RkBm.png" />
             </TransitionImage>
-            <img src="../assets/free.png" class="free-png" />
+            <img src="https://img2.imgtp.com/2024/04/19/ELAhNZaX.png" class="free-png" />
          </div>
          <div class="text-container">
             <div class="brief-box">
@@ -216,15 +216,15 @@ const toGitHub = () => {
       }
 
       .data-back-1 {
-         background-image: url('../assets/data-1.jpg');
+         background-image: url('https://img2.imgtp.com/2024/04/19/MNcECsx5.jpg');
       }
 
       .data-back-2 {
-         background-image: url('../assets/data-2.jpg');
+         background-image: url('https://img2.imgtp.com/2024/04/19/AkFybdag.jpg');
       }
 
       .data-back-3 {
-         background-image: url('../assets/data-3.png');
+         background-image: url('https://img2.imgtp.com/2024/04/19/MAirbRQ3.png');
       }
 
       .support-box {

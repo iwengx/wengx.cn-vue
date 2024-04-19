@@ -6,25 +6,25 @@
             <div class="demonstrate-item">
                <div class="demonstrate-description">全自动钓鱼</div>
                <TransitionImage :scale="0.542">
-                  <img src="../assets/lil-liver-helper/diaoyuDemonstration.gif" alt="全自动钓鱼" />
+                  <img src="https://img2.imgtp.com/2024/04/19/JE0OtzQP.gif" alt="全自动钓鱼" />
                </TransitionImage>
             </div>
             <div class="demonstrate-item">
                <div class="demonstrate-description">隐藏到后台挂机</div>
                <TransitionImage :scale="0.542">
-                  <img src="../assets/lil-liver-helper/HideProgram.gif" alt="隐藏到后台挂机" />
+                  <img src="https://img2.imgtp.com/2024/04/19/gQrBQoK7.gif" alt="隐藏到后台挂机" />
                </TransitionImage>
             </div>
             <div class="demonstrate-item">
                <div class="demonstrate-description">鼠标连点</div>
                <TransitionImage :scale="0.542">
-                  <img src="../assets/lil-liver-helper/liandianDemonstration.gif" alt="鼠标连点" />
+                  <img src="https://img2.imgtp.com/2024/04/19/Rxfi36kY.gif" alt="鼠标连点" />
                </TransitionImage>
             </div>
             <div class="demonstrate-item">
                <div class="demonstrate-description">自动发消息</div>
                <TransitionImage :scale="0.542">
-                  <img src="../assets/lil-liver-helper/SendInfo.gif" alt="自动发消息" />
+                  <img src="https://img2.imgtp.com/2024/04/19/4UKLoaLK.gif" alt="自动发消息" />
                </TransitionImage>
             </div>
          </div>
@@ -33,14 +33,14 @@
                <h1 class="software-title">我的世界<span class="light-text">小肝助手</span></h1>
                <h1 class="software-title">Minecraft Lil Liver Helper</h1>
                <h2 class="software-description">一款免费的无感挂机的宏脚本软件</h2>
-               <button
-                  class="minecraft-btn2 download-button base-btn"
+               <a
+                  class="minecraft-btn2 download-button"
                   style="color: white"
                   target="_blank"
                   href="../program/minecraft-lil-liver-helper-v2.5.4.exe"
                >
                   立刻下载 v2.5.4
-               </button>
+               </a>
             </div>
          </div>
       </div>
@@ -202,6 +202,7 @@ $maxWidth: 1200px;
       .download-button {
          margin-top: 10px;
          display: inline-block;
+         text-decoration: none;
       }
    }
 
