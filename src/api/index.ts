@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const service = axios.create({
-   baseURL: 'http://wengx.cn',
+   baseURL: 'https://api.wengx.cn',
    timeout: 60 * 1000,
 });
 
@@ -16,7 +16,7 @@ service.interceptors.request.use(
    },
    (error) => {
       Promise.reject(error);
-   }
+   },
 );
 
 /**
@@ -36,35 +36,19 @@ service.interceptors.response.use(
       const res = error.response;
       console.log('请求超时', res);
       return Promise.reject(res);
-   }
+   },
 );
 
 // * 替换 axios 默认返回类型的配置
 declare module 'axios' {
    export interface AxiosInstance {
-      get<T = any>(
-         url: string,
-         params?: object,
-         config?: AxiosRequestConfig
-      ): Promise<T>;
+      get<T = any>(url: string, params?: object, config?: AxiosRequestConfig): Promise<T>;
 
-      delete<T = any>(
-         url: string,
-         params?: object,
-         config?: AxiosRequestConfig
-      ): Promise<T>;
+      delete<T = any>(url: string, params?: object, config?: AxiosRequestConfig): Promise<T>;
 
-      post<T = any>(
-         url: string,
-         data?: any,
-         config?: AxiosRequestConfig
-      ): Promise<T>;
+      post<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>;
 
-      put<T = any>(
-         url: string,
-         data?: any,
-         config?: AxiosRequestConfig
-      ): Promise<T>;
+      put<T = any>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T>;
    }
 }
 
