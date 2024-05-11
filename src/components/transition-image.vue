@@ -41,9 +41,7 @@ onMounted(() => {
    // 在初始化时计算出高度并赋值给容器元素
    if (imageContainerEl.value && props.scale) {
       const { width } = imageContainerEl.value.getBoundingClientRect();
-      console.log('width :>> ', width);
       const height = width * props.scale;
-      console.log('height :>> ', height);
       imageContainerEl.value.style.height = `${height}px`;
    }
 });
