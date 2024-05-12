@@ -38,9 +38,9 @@
                   style="color: white"
                   target="_blank"
                   download
-                  href="/program/minecraft-lil-liver-helper-v2.5.4.exe"
+                  :href="`/program/minecraft-lil-liver-helper-${llhVersion}.exe`"
                >
-                  立刻下载 v2.5.5
+                  立刻下载 {{ llhVersion }}
                </a>
             </div>
          </div>
@@ -107,6 +107,9 @@ const getQuestionsImgUrl = (name: string) => {
 
 // * 当前点击的是哪个视频标题
 const active = ref(0);
+
+// * 软件版本
+const llhVersion = 'v2.5.5';
 
 // * 视频列表
 const videoList: VideoListType = [
