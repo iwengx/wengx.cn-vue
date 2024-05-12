@@ -38,9 +38,9 @@
                   style="color: white"
                   target="_blank"
                   download
-                  href="../program/minecraft-lil-liver-helper-v2.5.4.exe"
+                  href="/program/minecraft-lil-liver-helper-v2.5.4.exe"
                >
-                  立刻下载 v2.5.4
+                  立刻下载 v2.5.5
                </a>
             </div>
          </div>
