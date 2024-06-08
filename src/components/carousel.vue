@@ -3,9 +3,9 @@
       <div class="carousel">
          <div class="carousel-list">
             <img
-               v-for="(url, index) in imageList"
-               :key="index"
-               :src="url"
+               v-for="fileName in imageName"
+               :key="fileName"
+               :src="getImageUrl(fileName)"
                class="carousel-item"
                ref="imageEls"
             />
@@ -20,13 +20,11 @@
 import { onMounted, ref } from 'vue';
 import PrevNextIcon from './prev-next-icon.vue';
 
-const imageList: string[] = [
-   'https://img2.imgtp.com/2024/04/19/uwRNdcbo.png',
-   'https://img2.imgtp.com/2024/04/19/1m8PKBku.png',
-   'https://img2.imgtp.com/2024/04/19/Ghn2RkBm.png',
-   'https://img2.imgtp.com/2024/04/19/fA6RMuXP.png',
-   'https://img2.imgtp.com/2024/04/19/ZHMg2Bez.png',
-];
+function getImageUrl(name: string) {
+   return new URL(`../assets/lil-liver-helper/${name}.jpg`, import.meta.url).href;
+}
+
+const imageName: string[] = ['3', '2', 'home', '4', '5'];
 
 const imageEls = ref<HTMLImageElement[]>([]);
 

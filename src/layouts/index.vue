@@ -6,15 +6,11 @@
                <img
                   @click="router.push('/')"
                   class="wengxcn-img"
-                  src="https://img2.imgtp.com/2024/04/19/6Mz5BL3Q.png"
+                  src="../assets/wengxcn.png"
                   alt=""
                />
             </a>
-            <img
-               class="coolie-fear-img"
-               src="https://img2.imgtp.com/2024/04/19/VGA4usUM.png"
-               alt=""
-            />
+            <img class="coolie-fear-img" src="../assets/coolie-fear.png" alt="" />
          </div>
 
          <div class="body-content wengx-scrollbar">
@@ -29,7 +25,7 @@
             <div class="main-player-box">
                <div class="slideLeft">
                   <p class="nes-balloon from-right">hello，你好啊！欢迎来到我的网站~</p>
-                  <img src="https://img2.imgtp.com/2024/04/19/0ufv2cAH.png" alt="史蒂夫" />
+                  <img src="../assets/minecraft-player-1.png" alt="史蒂夫" />
                </div>
             </div>
          </div>
@@ -70,7 +66,7 @@ getToDayLilLiverHelperVisitorsCount()
    min-height: 100vh;
    padding: 40px;
    background-color: #d8d8d8;
-   background-image: url('https://img2.imgtp.com/2024/04/19/SzpASoin.png');
+   background-image: url('../assets/wallhaven-z8vk1w.png');
    background-size: cover;
    display: flex;
    align-items: center;
@@ -92,7 +88,7 @@ getToDayLilLiverHelperVisitorsCount()
    border-radius: 15px;
    overflow: hidden;
 
-   background-image: url('https://img2.imgtp.com/2024/04/19/eYzbRIlY.png');
+   background-image: url('../assets/bg-wool-light.png');
    background-size: cover;
 
    .body-header {
@@ -144,7 +140,7 @@ getToDayLilLiverHelperVisitorsCount()
       width: 100%;
       height: 150px;
 
-      background-image: url('https://img2.imgtp.com/2024/04/19/VUiWPgVT.png');
+      background-image: url('../assets/trans-bottom-darkwool.png');
       background-repeat: repeat-x;
       background-position: bottom;
 

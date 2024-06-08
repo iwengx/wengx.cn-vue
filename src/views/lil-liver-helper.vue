@@ -6,25 +6,25 @@
             <div class="demonstrate-item">
                <div class="demonstrate-description">全自动钓鱼</div>
                <TransitionImage :scale="0.542">
-                  <img src="https://img2.imgtp.com/2024/04/19/JE0OtzQP.gif" alt="全自动钓鱼" />
+                  <img src="../assets/lil-liver-helper/diaoyuDemonstration.gif" alt="全自动钓鱼" />
                </TransitionImage>
             </div>
             <div class="demonstrate-item">
                <div class="demonstrate-description">隐藏到后台挂机</div>
                <TransitionImage :scale="0.542">
-                  <img src="https://img2.imgtp.com/2024/04/19/gQrBQoK7.gif" alt="隐藏到后台挂机" />
+                  <img src="../assets/lil-liver-helper/HideProgram.gif" alt="隐藏到后台挂机" />
                </TransitionImage>
             </div>
             <div class="demonstrate-item">
                <div class="demonstrate-description">鼠标连点</div>
                <TransitionImage :scale="0.542">
-                  <img src="https://img2.imgtp.com/2024/04/19/Rxfi36kY.gif" alt="鼠标连点" />
+                  <img src="../assets/lil-liver-helper/liandianDemonstration.gif" alt="鼠标连点" />
                </TransitionImage>
             </div>
             <div class="demonstrate-item">
                <div class="demonstrate-description">自动发消息</div>
                <TransitionImage :scale="0.542">
-                  <img src="https://img2.imgtp.com/2024/04/19/4UKLoaLK.gif" alt="自动发消息" />
+                  <img src="../assets/lil-liver-helper/SendInfo.gif" alt="自动发消息" />
                </TransitionImage>
             </div>
          </div>
