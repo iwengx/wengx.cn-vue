@@ -35,10 +35,9 @@
                <h2 class="software-description">一款免费的无感挂机的宏脚本软件</h2>
                <a
                   class="minecraft-btn2 download-button"
-                  style="color: white"
                   target="_blank"
                   download
-                  :href="`/program/minecraft-lil-liver-helper-${llhVersion}.exe`"
+                  :href="downloadLink"
                >
                   立刻下载 {{ llhVersion }}
                </a>
@@ -71,7 +70,7 @@
          </div>
       </div>
       <div class="problem-box">
-         <h1>&#128204; 常见问题</h1>
+         <h1>&#128204; 常见问题 Q&A</h1>
          <span>如果程序发生一些错误，不妨看看这里或许有解决的方法.</span>
          <br />
          <div v-for="item in questionsAndAnswersList">
@@ -111,6 +110,9 @@ const active = ref(0);
 // * 软件版本
 const llhVersion = 'v2.5.5';
 
+// * 下载链接
+const downloadLink = `https://slink.ltd/https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/2.5.5/minecraft-lil-liver-helper-${llhVersion}.exe`;
+
 // * 视频列表
 const videoList: VideoListType = [
    {
@@ -143,10 +145,10 @@ const setActiveBtn = (key: number) => {
 // * 问答列表
 const questionsAndAnswersList: QAType = [
    {
-      createTime: '2020年8月5日',
-      questions: '如果 360安全、腾讯安全..等安全软件提示危险程序',
+      createTime: '2024年6月30日',
+      questions: '如果 360安全、腾讯安全、浏览器阻止下载..等安全软件提示危险程序',
       answers:
-         '添加到信任区就ok了。 因为隐藏程序功能是要获取游戏进程的，按键指令也是发送到指定的进程中，so 安全软件们就说是病毒软件啦.',
+         '添加到信任区就ok了。 因为隐藏到后台挂机功能是要获取游戏进程的，按键指令也是发送到指定的进程中，so 安全软件们就说是病毒软件啦.',
    },
    {
       createTime: '2020年2月9日',
@@ -204,6 +206,7 @@ $maxWidth: 1200px;
       }
 
       .download-button {
+         color: #fff;
          margin-top: 10px;
          display: inline-block;
          text-decoration: none;
