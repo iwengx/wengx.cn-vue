@@ -28,17 +28,21 @@
    table {
       td,
       th {
-         font-size: 1.2rem;
+         font-size: 1rem;
          padding: 5px 20px;
       }
 
       tr {
-         border-bottom: 1px solid #c4c4c4;
-         transition: background-color 0.3s;
+         border-bottom: 1px solid #dedede;
+         transition: background-color 0.1s;
 
          &:hover {
-            background-color: #c4c4c4;
+            background-color: #dedede;
          }
+      }
+
+      .td-money {
+         text-align: right;
       }
    }
 

@@ -6,14 +6,14 @@
                <tr>
                   <th>昵称</th>
                   <th>时间</th>
-                  <th>金额（元）</th>
+                  <th>金额 (￥)</th>
                </tr>
             </thead>
             <tbody>
                <tr v-for="item in supportList">
                   <td>{{ item.name }}</td>
                   <td>{{ item.time }}</td>
-                  <td>{{ item.money }} ￥</td>
+                  <td class="td-money">{{ item.money }}</td>
                </tr>
             </tbody>
          </table>
