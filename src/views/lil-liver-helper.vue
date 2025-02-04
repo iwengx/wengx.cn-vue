@@ -108,10 +108,10 @@ const getQuestionsImgUrl = (name: string) => {
 const active = ref(0);
 
 // * 软件版本
-const llhVersion = 'v2.5.5';
+const llhVersion = '2.5.6';
 
 // * 下载链接
-const downloadLink = `https://slink.ltd/https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/2.5.5/minecraft-lil-liver-helper-${llhVersion}.exe`;
+const downloadLink = `https://slink.ltd/https://github.com/iwengx/Minecraft-Lil-liver-helper/releases/download/${llhVersion}/minecraft-lil-liver-helper-v${llhVersion}.exe`;
 
 // * 视频列表
 const videoList: VideoListType = [
