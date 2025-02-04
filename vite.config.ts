@@ -27,5 +27,9 @@ export default defineConfig({
          '@': path.resolve(__dirname, './src'),
       },
    },
+   define: {
+      // enable hydration mismatch details in production build
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'true',
+   },
 });
 

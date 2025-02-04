@@ -1,17 +1,17 @@
 {
    "name": "wengx.cn",
-   "private": true,
-   "version": "0.0.0",
+   "version": "1.0.0",
+   "description": "我的世界小肝助手官网, 企鹅群955907864",
+   "author": "WengX",
    "scripts": {
       "dev": "vite",
       "build": "vue-tsc --noEmit && vite build",
       "preview": "vite preview"
    },
    "dependencies": {
-      "axios": "^0.26.1",
+      "axios": "^1.7.9",
       "echarts": "^5.3.2",
       "nes.css": "^2.3.0",
-      "pinia": "^2.0.13",
       "sass": "^1.50.1",
       "vue": "^3.2.25",
       "vue-router": "^4.0.14"
@@ -19,9 +19,9 @@
    "devDependencies": {
       "@babel/types": "^7.17.0",
       "@types/node": "^20.12.7",
-      "@vitejs/plugin-vue": "^2.2.0",
+      "@vitejs/plugin-vue": "^5.2.1",
       "typescript": "^4.5.4",
-      "vite": "^2.8.0",
+      "vite": "^6.0.11",
       "vue-tsc": "^0.34.9"
    }
 }
